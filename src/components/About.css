@@ -1,0 +1,122 @@
+.about-section {
+  padding-top: 5rem;
+  padding-bottom: 5.5rem;
+  background-color: #ffffff;
+}
+
+.about-header {
+  margin-bottom: 2.75rem;
+}
+
+.about-title {
+  font-size: 2.375rem;
+  font-weight: 800;
+  color: var(--text-title);
+  letter-spacing: -0.03em;
+  margin-top: 0.25rem;
+}
+
+/* 2-Column Layout */
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: stretch;
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+
+/* Portrait photo container */
+.about-photo-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 284px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  background-color: transparent;
+}
+
+img.about-photo {
+  position: absolute;
+  top: -6%;
+  left: -6%;
+  width: 112%;
+  height: 112%;
+  max-width: none !important;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Bio Card */
+.about-card {
+  min-width: 0;
+  width: 100%;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: var(--shadow-card);
+}
+
+.about-bio-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 1.125rem;
+  line-height: 1.55;
+  color: var(--text-title);
+  margin-bottom: 1rem;
+}
+
+/* Link with Arrow */
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.about-link:hover {
+  color: var(--primary-hover);
+  transform: translateX(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: 1.5rem;
+  }
+
+  .about-card {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-photo-wrapper {
+    max-height: 320px;
+  }
+
+  .about-card {
+    padding: 1.75rem 1.5rem;
+  }
+  
+  .about-bio-text {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+}

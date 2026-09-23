@@ -1,0 +1,117 @@
+.process-section {
+  padding-top: 5rem;
+  padding-bottom: 5.5rem;
+  background-color: #f8fafc;
+}
+
+.process-header {
+  margin-bottom: 3rem;
+}
+
+.process-title {
+  font-size: 2.375rem;
+  font-weight: 800;
+  color: var(--text-title);
+  letter-spacing: -0.03em;
+  margin-top: 0.25rem;
+}
+
+.process-subtitle {
+  font-size: 1.0625rem;
+  color: var(--text-body);
+  margin-top: 0.5rem;
+  max-width: 650px;
+}
+
+/* 5 Steps Grid */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.process-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.process-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-border);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.process-step-number {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.process-step-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-title);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.015em;
+}
+
+.process-step-text {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--text-body);
+}
+
+/* Bottom Callout Note */
+.process-bottom-note {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .process-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .process-card:last-child {
+    grid-column: span 2;
+  }
+
+  .process-bottom-note {
+    text-align: left;
+  }
+}
+
+@media (max-width: 520px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-card:last-child {
+    grid-column: span 1;
+  }
+
+  .process-title {
+    font-size: 1.875rem;
+  }
+}
