@@ -1,0 +1,195 @@
+.about-page {
+  color: #0a262b;
+  background: #fff;
+  font-family: 'Manrope', var(--font-sans);
+}
+
+.about-page h1,
+.about-page h2,
+.about-page h3 {
+  font-family: 'Geist', var(--font-sans);
+}
+
+.about-page-hero,
+.about-page-journey {
+  background: #fff;
+}
+
+.about-page-hero-inner,
+.about-page-section-inner {
+  width: 100%;
+  padding: 48px 16px;
+}
+
+.about-page-hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-page-photo {
+  height: 360px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+}
+
+.about-page-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-page-photo:hover img { transform: scale(1.04); }
+
+.about-page-intro,
+.about-page-section-heading,
+.about-role-copy,
+.about-page-education-column {
+  min-width: 0;
+}
+
+.about-page-intro { display: flex; flex-direction: column; gap: 16px; }
+.about-page-kicker { color: #006778; font-size: 13px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+.about-page h1 { font-size: 28px; line-height: 34px; }
+.about-page h2 { font-size: 28px; line-height: 1.2; }
+.about-page h3 { font-size: 18px; line-height: 1.25; }
+.about-page p { color: #5d7175; }
+.about-page-lead { font-size: 15px; line-height: 24px; }
+.about-page-supporting { font-size: 14px; line-height: 22px; }
+
+.about-page-values,
+.about-page-education,
+.about-page-cta { background: #f8fafc; border-color: #e2e8f0; }
+.about-page-values { border-block: 1px solid #e2e8f0; }
+.about-value-grid { display: grid; gap: 16px; margin-top: 24px; }
+.about-value-card {
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.about-value-card:hover { transform: translateY(-4px); border-color: var(--primary-border); box-shadow: var(--shadow-card-hover); }
+.about-value-card p { margin-top: 8px; font-size: 13px; line-height: 20px; }
+
+.about-page-section-heading p { margin-top: 8px; font-size: 14px; }
+.about-role-list { display: flex; flex-direction: column; gap: 24px; margin-top: 24px; }
+.about-role { display: flex; flex-direction: column; gap: 12px; padding: 0 0 20px; border-bottom: 1px solid #e2e8f0; transition: border-color 0.25s ease; }
+.about-role-meta { display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+.about-role-meta p { color: #006778; font-weight: 700; transition: color 0.2s ease; }
+.about-role-copy { display: flex; flex-direction: column; gap: 6px; }
+.about-role-copy p { font-size: 13px; line-height: 20px; }
+.about-role:hover { border-color: var(--primary-border); }
+.about-role:hover .about-role-meta p { color: var(--primary-hover); }
+
+.about-page-education { border-block: 1px solid #e2e8f0; }
+.about-page-education-inner { display: flex; flex-direction: column; gap: 32px; }
+.about-education-list { display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+.about-education-list h3 { font-size: 16px; }
+.about-education-list p { margin-top: 4px; font-size: 13px; }
+.about-beyond-copy { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; font-size: 14px; line-height: 22px; }
+.about-page-cta { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 56px 16px; text-align: center; }
+.about-page-cta h2 { font-size: 24px; }
+.about-page-cta p { font-size: 14px; }
+.about-page-cta a {
+  margin-top: 12px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background: #0d9488;
+  color: #fff;
+  font-family: 'Geist', var(--font-sans);
+  font-weight: 600;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.about-page-cta a:hover { background: var(--primary-hover); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 130, 114, 0.25); }
+.about-page-cta a:focus-visible,
+.about-value-card:focus-within { outline: 2px solid var(--primary); outline-offset: 3px; }
+
+@media (min-width: 481px) {
+  .about-page-hero-inner, .about-page-section-inner { padding-inline: 24px; }
+}
+
+@media (min-width: 769px) {
+  .about-page-hero-inner, .about-page-section-inner { padding-inline: 40px; padding-block: 64px; }
+  .about-page-hero-inner { flex-direction: row; align-items: center; gap: 32px; }
+  .about-page-photo { flex: 0 0 240px; height: 240px; }
+  .about-page-intro { flex: 1; }
+  .about-page h1 { font-size: 32px; }
+  .about-value-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .about-value-card { padding: 20px; }
+  .about-role { flex-direction: row; gap: 40px; padding-bottom: 24px; }
+  .about-role-meta { flex: 0 0 200px; }
+  .about-role-copy { flex: 1; }
+  .about-role-copy h3 { font-size: 20px; }
+  .about-role-copy p { font-size: 14px; line-height: 22px; }
+  .about-page-cta { padding: 64px 40px; }
+  .about-page-cta h2 { font-size: 36px; }
+}
+
+@media (min-width: 1024px) {
+  .about-page-hero-inner, .about-page-section-inner { padding-inline: 80px; }
+}
+
+@media (min-width: 1440px) {
+  .about-page-hero-inner, .about-page-section-inner { padding-inline: 96px; padding-block: 96px; }
+  .about-page-hero-inner { gap: 64px; }
+  .about-page-photo { flex-basis: 480px; height: 520px; border-radius: 16px; }
+  .about-page-intro { gap: 24px; }
+  .about-page-kicker { font-size: 14px; letter-spacing: 3px; }
+  .about-page h1 { font-size: 56px; line-height: 64px; }
+  .about-page-lead { font-size: 20px; line-height: 32px; }
+  .about-page-supporting { font-size: 16px; line-height: 26px; }
+  .about-page h2 { font-size: 48px; }
+  .about-page-values .about-page-section-inner, .about-page-journey .about-page-section-inner { padding-block: 96px; }
+  .about-value-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 48px; }
+  .about-value-card { padding: 24px; border-radius: 16px; }
+  .about-value-card h3 { font-size: 22px; }
+  .about-value-card p { font-size: 14px; line-height: 22px; }
+  .about-role-list { margin-top: 48px; }
+  .about-role-meta { flex-basis: 240px; }
+  .about-role-copy h3 { font-size: 22px; }
+  .about-role-copy p { font-size: 15px; line-height: 24px; }
+  .about-page-education-inner { flex-direction: row; gap: 64px; }
+  .about-page-education-column { flex: 1; }
+  .about-page-education .about-page-section-inner { padding-block: 96px; }
+  .about-page-education-column h2 { font-size: 48px; }
+  .about-education-list { gap: 24px; }
+  .about-education-list h3 { font-size: 20px; }
+  .about-education-list p { font-size: 15px; }
+  .about-beyond-copy { font-size: 16px; line-height: 26px; gap: 12px; }
+  .about-page-cta { padding: 96px; gap: 12px; }
+  .about-page-cta h2 { font-size: 48px; }
+  .about-page-cta p { font-size: 18px; }
+}
+
+@media (min-width: 1920px) {
+  .about-page-hero-inner, .about-page-section-inner { padding-inline: 160px; padding-block: 120px; }
+  .about-page-hero-inner { gap: 96px; }
+  .about-page-photo { flex-basis: 560px; height: 600px; border-radius: 24px; }
+  .about-page-intro { gap: 32px; }
+  .about-page h1 { font-size: 72px; line-height: 80px; }
+  .about-page-kicker { font-size: 16px; letter-spacing: 4px; }
+  .about-page-lead { font-size: 24px; line-height: 38px; }
+  .about-page-supporting { font-size: 18px; line-height: 28px; }
+  .about-page h2 { font-size: 56px; }
+  .about-page-values .about-page-section-inner, .about-page-journey .about-page-section-inner { padding-block: 120px; }
+  .about-page-values .about-page-section-inner { padding-inline: 160px; }
+  .about-value-grid { gap: 32px; margin-top: 64px; }
+  .about-value-card { padding: 32px; border-radius: 20px; }
+  .about-value-card h3 { font-size: 26px; }
+  .about-value-card p { font-size: 16px; line-height: 26px; }
+  .about-role-list { margin-top: 64px; }
+  .about-role-copy h3 { font-size: 22px; }
+  .about-role-copy p { font-size: 16px; line-height: 26px; }
+  .about-page-education .about-page-section-inner { padding-block: 120px; }
+  .about-page-education-column h2 { font-size: 56px; }
+  .about-education-list h3 { font-size: 26px; }
+  .about-education-list p { font-size: 16px; }
+  .about-beyond-copy { font-size: 18px; line-height: 28px; gap: 16px; }
+  .about-page-cta { padding: 120px; }
+  .about-page-cta h2 { font-size: 56px; }
+  .about-page-cta p { font-size: 20px; }
+}

@@ -7,20 +7,25 @@ import { About } from './components/About';
 import { CtaBanner } from './components/CtaBanner';
 import { Footer } from './components/Footer';
 import { BreakpointViewer } from './components/BreakpointViewer';
+import { AboutPage } from './components/AboutPage';
 
 export function App() {
+  const isAboutPage = window.location.pathname === '/about';
+
   return (
     <BreakpointViewer>
       <div className="portfolio-app">
         <Navbar />
-        <main>
-          <Hero />
-          <SelectedWork />
-          <Philosophy />
-          <Process />
-          <About />
-          <CtaBanner />
-        </main>
+        {isAboutPage ? <AboutPage /> : (
+          <main>
+            <Hero />
+            <SelectedWork />
+            <Philosophy />
+            <Process />
+            <About />
+            <CtaBanner />
+          </main>
+        )}
         <Footer />
       </div>
     </BreakpointViewer>

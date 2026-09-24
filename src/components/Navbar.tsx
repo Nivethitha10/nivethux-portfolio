@@ -6,6 +6,7 @@ import './Navbar.css';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const isAboutPage = window.location.pathname === '/about';
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -20,10 +21,10 @@ export const Navbar: React.FC = () => {
         <nav aria-label="Main Navigation">
           <ul className="navbar-links">
             <li>
-              <a href="#home" className="nav-link active">Home</a>
+              <a href="/" className={`nav-link ${!isAboutPage ? 'active' : ''}`}>Home</a>
             </li>
             <li>
-              <a href="#about" className="nav-link">About Me</a>
+              <a href="/about" className={`nav-link ${isAboutPage ? 'active' : ''}`}>About Me</a>
             </li>
             <li>
               <a href="#work" className="nav-link">Work</a>
@@ -62,10 +63,10 @@ export const Navbar: React.FC = () => {
       <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
         <ul className="mobile-nav-links">
           <li>
-            <a href="#home" className="mobile-nav-link" onClick={() => setIsOpen(false)}>Home</a>
+            <a href="/" className="mobile-nav-link" onClick={() => setIsOpen(false)}>Home</a>
           </li>
           <li>
-            <a href="#about" className="mobile-nav-link" onClick={() => setIsOpen(false)}>About Me</a>
+            <a href="/about" className="mobile-nav-link" onClick={() => setIsOpen(false)}>About Me</a>
           </li>
           <li>
             <a href="#work" className="mobile-nav-link" onClick={() => setIsOpen(false)}>Work</a>
