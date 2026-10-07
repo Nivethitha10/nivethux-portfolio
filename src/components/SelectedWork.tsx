@@ -1,11 +1,12 @@
 import React from 'react';
-import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import './SelectedWork.css';
 
 interface Project {
   id: string;
   image: string;
   tags: string;
+  number: string;
   title: string;
   description: string;
   link: string;
@@ -14,27 +15,30 @@ interface Project {
 const projects: Project[] = [
   {
     id: 'financial',
-    image: '/assets/project-financial.jpg',
+    image: '/assets/project-banking.png',
     tags: 'FINTECH · ENTERPRISE · COMPLEX DATA',
-    title: 'Enterprise Financial Management',
-    description: 'Redesigning the financial reporting and transaction ledger workflows for multinational operations. Simplifying complex tax regulations into structured UI actions.',
-    link: '#work'
+    number: '01',
+    title: 'Enterprise Banking Platform',
+    description: 'Designing role-based financial workflows for complex monitoring and transaction operations. Turning dense data into clear, decision-ready experiences.',
+    link: '/project-1'
   },
   {
     id: 'inventory',
-    image: '/assets/project-inventory.jpg',
-    tags: 'LOGISTICS · WORKFLOW AUTO · IOT SYSTEMS',
-    title: 'Enterprise Inventory & Material Movement',
-    description: 'Unifying hardware tracking scanners, warehouse routing protocols, and real-time inventory levels into a centralized responsive dispatch dashboard.',
-    link: '#work'
+    image: '/assets/project-warehouse.png',
+    tags: 'MANUFACTURING · WAREHOUSE OPS · ZEBRA HANDHELD',
+    number: '02',
+    title: 'Warehouse Operations & Material Movement',
+    description: 'State-driven scanning workflows for line workers — moving, tracking, and dispatching material with zero room for error.',
+    link: '/project-2'
   },
   {
-    id: 'cogniwave',
-    image: '/assets/project-cogniwave.jpg',
-    tags: 'HUMAN-AI · DEV TOOLS · VISUAL PROGRAMMING',
-    title: 'Cogweaver',
-    description: 'A node-based interface builder allowing software engineers to train, monitor, and configure AI agent behaviors visually inside native codebases.',
-    link: '#work'
+    id: 'strip-test',
+    image: '/assets/project-strip-test.png',
+    tags: 'AGTECH · FIELD DATA · MOBILE',
+    number: '03',
+    title: 'Strip Test',
+    description: 'Helping farmers and agronomists score field quality in minutes — guided sampling built for the field, not the office.',
+    link: '/project-3'
   }
 ];
 
@@ -47,9 +51,9 @@ export const SelectedWork: React.FC = () => {
             <span className="eyebrow">SELECTED WORK</span>
             <h2 className="selected-work-title">Following the thread.</h2>
           </div>
-          <a href="#work" className="btn-explore-all">
+          <a href="/work" className="btn-explore-all">
             <span>See more</span>
-            <ArrowRight size={14} />
+            <ArrowUpRight size={16} />
           </a>
         </div>
 
@@ -63,12 +67,12 @@ export const SelectedWork: React.FC = () => {
                   className="project-thumbnail"
                   loading="lazy"
                 />
-                <div className="project-action-badge" aria-hidden="true">
-                  <ArrowUpRight size={16} />
-                </div>
               </div>
               <div className="project-card-content">
-                <div className="project-tags">{project.tags}</div>
+                <div className="project-meta">
+                  <span className="project-tags">{project.tags}</span>
+                  <span className="project-number">{project.number}</span>
+                </div>
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
               </div>

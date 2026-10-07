@@ -14,7 +14,7 @@ export const Logo: React.FC<LogoProps> = ({ size = 'normal', className = '' }) =
       <img
         src={logoImage}
         alt="NivethUX"
-        style={{ width: isLarge ? '216px' : '162px', height: 'auto', display: 'block' }}
+        style={{ width: isLarge ? '216px' : '168px', height: 'auto', display: 'block' }}
       />
     </a>
   );

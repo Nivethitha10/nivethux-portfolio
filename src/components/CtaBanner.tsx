@@ -15,7 +15,7 @@ export const CtaBanner: React.FC = () => {
           </span>
           <a href="mailto:hello@nivethux.com" className="btn-cta-main">
             <span>Let's Talk</span>
-            <ArrowRight size={16} />
+          <ArrowRight size={18} />
           </a>
         </div>
       </div>

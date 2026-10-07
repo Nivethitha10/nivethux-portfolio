@@ -1,5 +1,4 @@
 import React from 'react';
-import { Layers, Network, Sparkles } from 'lucide-react';
 import './Philosophy.css';
 
 interface Principle {
@@ -13,22 +12,22 @@ interface Principle {
 const principles: Principle[] = [
   {
     id: 'workflows',
-    icon: <Layers size={24} />,
-    title: 'Enterprise Workflows',
+    icon: <img src="/assets/icon-settings.svg" alt="" />,
+    title: 'Enterprise workflows',
     text: 'Operational tools and data-heavy systems that help people know what matters and what to do next.',
     tags: ['Role-based systems', 'Operational tools', 'Information architecture']
   },
   {
     id: 'systems',
-    icon: <Network size={24} />,
-    title: 'Systems Thinking',
+    icon: <img src="/assets/icon-settings.svg" alt="" />,
+    title: 'Systems thinking',
     text: 'The structure behind the screens: how states, permissions, and validation fit together, and how patterns scale into design systems.',
     tags: ['States', 'Permissions', 'Validation', 'Design systems']
   },
   {
     id: 'ai',
-    icon: <Sparkles size={24} />,
-    title: 'Human-AI Interaction',
+    icon: <img src="/assets/icon-settings.svg" alt="" />,
+    title: 'Human-AI interaction',
     text: 'Intelligent features people can trust, question, and control.',
     tags: ['Trust', 'Transparency', 'Human-in-the-loop']
   }
@@ -52,12 +51,14 @@ export const Philosophy: React.FC = () => {
               <div className="philosophy-icon-badge">
                 {principle.icon}
               </div>
-              <h3 className="philosophy-card-title">{principle.title}</h3>
-              <p className="philosophy-card-text">{principle.text}</p>
-              <div className="philosophy-tags">
-                {principle.tags.map((tag) => (
-                  <span key={tag} className="philosophy-tag">{tag}</span>
-                ))}
+              <div className="philosophy-copy">
+                <h3 className="philosophy-card-title">{principle.title}</h3>
+                <p className="philosophy-card-text">{principle.text}</p>
+                <div className="philosophy-tags">
+                  {principle.tags.map((tag) => (
+                    <span key={tag} className="philosophy-tag">{tag}</span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Logo } from './Logo';
-import behanceIcon from '../../icons/Behance.png';
-import dribbbleIcon from '../../icons/Dribbble.png';
-import instagramIcon from '../../icons/Instagram.png';
-import linkedinIcon from '../../icons/Linkedin.png';
+import behanceIcon from '../../Icons/Behance.png';
+import dribbbleIcon from '../../Icons/Dribbble.png';
+import instagramIcon from '../../Icons/Instagram.png';
+import linkedinIcon from '../../Icons/Linkedin.png';
 import './Footer.css';
 
 export const Footer: React.FC = () => {
@@ -27,22 +27,19 @@ export const Footer: React.FC = () => {
 
           {/* Navigation Column */}
           <div className="footer-col">
-            <div className="footer-col-header">MENU</div>
+            <div className="footer-col-header">Menu</div>
             <ul className="footer-links-list">
               <li>
-                <a href="#home" className="footer-link">HOME</a>
+                <a href="/" className="footer-link">Home</a>
               </li>
               <li>
-                <a href="#work" className="footer-link footer-link-active">WORK</a>
+                <a href="/work" className="footer-link">Work</a>
               </li>
               <li>
-                <a href="#about" className="footer-link">ABOUT</a>
+                <a href="/about" className="footer-link">About Me</a>
               </li>
               <li>
-                <a href="#contact" className="footer-link">CONTACT</a>
-              </li>
-              <li>
-                <a href="#philosophy" className="footer-link">THINKING</a>
+                <a href="/contact" className="footer-link">Contact</a>
               </li>
             </ul>
           </div>
@@ -82,6 +79,9 @@ export const Footer: React.FC = () => {
         {/* Large Watermark */}
         <div className="footer-watermark-wrapper" aria-hidden="true">
           <span className="footer-watermark-text">NivethUX</span>
+        </div>
+        <div className="footer-bottom-bar">
+          <span>© 2026 Nivethitha R B</span>
         </div>
       </div>
     </footer>

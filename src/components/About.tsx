@@ -14,7 +14,7 @@ export const About: React.FC = () => {
         <div className="about-layout">
           <div className="about-photo-wrapper">
             <img 
-              src="/assets/nive-photo.jpg" 
+              src="/assets/figma-about.png"
               alt="Nivethitha — Product Designer" 
               className="about-photo"
               loading="lazy"
@@ -25,7 +25,7 @@ export const About: React.FC = () => {
             <p className="about-bio-text">
               I find the threads between users, technology, and business needs. My work centers on taking highly ambiguous, data-dense workflows and turning them into straightforward, reliable experiences. I believe good UX is not just about making interfaces beautiful, but making deep technical systems genuinely accessible and clear.
             </p>
-            <a href="#contact" className="about-link">
+            <a href="/about" className="about-link">
               <span>Learn More About My Story</span>
               <ArrowRight size={16} />
             </a>

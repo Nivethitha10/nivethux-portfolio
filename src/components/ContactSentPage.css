@@ -1,0 +1,190 @@
+.portfolio-app:has(.contact-sent-page),
+body:has(.contact-sent-page),
+html:has(.contact-sent-page) { background: #fff; }
+
+.contact-sent-page {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.contact-sent-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 64px 80px 48px;
+}
+
+.contact-sent-eyebrow,
+.contact-sent-direct h2 {
+  color: #0d9488;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.contact-sent-invitation {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-sent-invitation h1 {
+  color: #0f172a;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 56px;
+  letter-spacing: -1.5px;
+}
+
+.contact-sent-invitation > p {
+  color: #64748b;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.contact-sent-copy {
+  max-width: 744px;
+  color: #64748b;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.contact-sent-details {
+  display: grid;
+  grid-template-columns: minmax(0, 704px) minmax(0, 1fr);
+  align-items: start;
+  gap: 96px;
+  padding: 0 80px 72px;
+}
+
+.message-confirmation {
+  display: flex;
+  min-width: 0;
+  min-height: 440px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 40px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.message-confirmation-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #0d9488;
+  background: #effaf8;
+}
+
+.message-sent-status {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  color: #065f46;
+  background: #d1fae5;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: .2px;
+}
+
+.message-sent-status i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+}
+
+.message-confirmation h2 {
+  color: #0f172a;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.message-sent-action {
+  display: inline-flex;
+  width: 196px;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: #fff;
+  background: #0d9488;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.message-sent-action:hover { background: #0f766e; }
+
+.contact-sent-direct {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.contact-sent-rule { width: 100%; height: 1px; background: #e2e8f0; }
+.contact-sent-direct h2 { margin-top: -8px; }
+.contact-sent-direct > a,
+.contact-sent-email > a {
+  color: #0d9488;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.contact-sent-direct > a:hover,
+.contact-sent-email > a:hover { color: #0f766e; text-decoration: underline; }
+
+.contact-sent-email {
+  display: flex;
+  min-width: 0;
+  max-width: 100%;
+  flex-direction: column;
+  gap: 8px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 20px;
+}
+.contact-sent-email > a { overflow-wrap: anywhere; text-decoration: underline; text-underline-offset: 2px; }
+
+@media (max-width: 1100px) {
+  .contact-sent-details { grid-template-columns: minmax(0, 1.6fr) minmax(190px, .8fr); gap: 48px; }
+}
+
+@media (max-width: 820px) {
+  .contact-sent-intro { padding: 56px 32px 40px; }
+  .contact-sent-invitation h1 { font-size: 40px; line-height: 48px; }
+  .contact-sent-details { grid-template-columns: minmax(0, 1fr); gap: 48px; padding: 0 32px 56px; }
+  .contact-sent-direct { gap: 20px; }
+}
+
+@media (max-width: 540px) {
+  .contact-sent-intro { gap: 20px; padding: 44px 20px 32px; }
+  .contact-sent-invitation h1 { font-size: 36px; line-height: 42px; }
+  .contact-sent-invitation > p { font-size: 20px; line-height: 28px; }
+  .contact-sent-copy { font-size: 16px; line-height: 26px; }
+  .contact-sent-details { gap: 40px; padding: 0 20px 44px; }
+  .message-confirmation { min-height: 0; gap: 20px; padding: 24px; }
+  .message-confirmation h2 { font-size: 26px; }
+  .message-sent-action { width: 100%; }
+}

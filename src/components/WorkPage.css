@@ -1,0 +1,297 @@
+.portfolio-app:has(.work-page),
+body:has(.work-page),
+html:has(.work-page) {
+  background: #fff;
+}
+
+.work-page {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.work-introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 80px 64px 48px;
+  overflow: hidden;
+}
+
+.work-eyebrow {
+  color: #0d9488;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.work-introduction h1 {
+  color: #0f172a;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 56px;
+  letter-spacing: -1.5px;
+}
+
+.work-intro-copy {
+  max-width: 800px;
+  color: #64748b;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.work-nda-note {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.work-index {
+  display: flex;
+  flex-direction: column;
+  padding: 0 64px 64px;
+  overflow: hidden;
+}
+
+.work-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 440px;
+  align-items: center;
+  gap: 72px;
+  padding: 48px 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.work-project-information {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* Keep the copy from being clipped when the row collapses at tablet widths. */
+  overflow: visible;
+}
+
+.work-project-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.work-project-heading h2 {
+  color: #0f172a;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: -1px;
+  overflow-wrap: anywhere;
+}
+
+.work-project-category {
+  color: #0d9488;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.work-project-category.uppercase {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 1.5px;
+}
+
+.work-project-description {
+  color: #0f172a;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.work-project-focus {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.work-case-action {
+  padding-top: 8px;
+}
+
+.work-case-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #0d9488;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  text-decoration: none;
+}
+
+a.work-case-link:hover {
+  color: #0f766e;
+}
+
+.work-case-arrow {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-case-arrow img {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.work-project-visual {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.work-preview {
+  position: relative;
+  width: 100%;
+  height: 268px;
+  overflow: hidden;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.work-preview img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.work-preview-01 img {
+  top: -20.51%;
+  left: -4.61%;
+  width: 109.4%;
+  height: 129.42%;
+}
+
+.work-preview-caption {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+}
+
+@media (max-width: 1000px) {
+  .work-entry {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 38%);
+    gap: 40px;
+  }
+
+  .work-project-visual {
+    width: 100%;
+  }
+
+  .work-preview {
+    height: auto;
+    aspect-ratio: 440 / 268;
+  }
+}
+
+@media (max-width: 800px) {
+  .work-introduction {
+    padding: 56px 32px 40px;
+  }
+
+  .work-introduction h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .work-index {
+    padding: 0 32px 48px;
+  }
+
+  .work-entry {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: 28px;
+    padding: 36px 0;
+  }
+
+  .work-project-information {
+    width: 100%;
+    min-width: 0;
+    overflow: visible;
+  }
+
+  .work-project-description,
+  .work-project-focus,
+  .work-case-action {
+    display: block;
+    visibility: visible;
+    height: auto;
+  }
+
+  .work-project-heading {
+    display: flex;
+    visibility: visible;
+    height: auto;
+  }
+
+  .work-project-visual {
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .work-introduction {
+    gap: 20px;
+    padding: 44px 20px 32px;
+  }
+
+  .work-introduction h1 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .work-intro-copy {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .work-index {
+    padding: 0 20px 40px;
+  }
+
+  .work-project-heading h2 {
+    font-size: 28px;
+    line-height: 36px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .work-project-description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .work-preview {
+    aspect-ratio: 440 / 268;
+  }
+
+  .work-case-link {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

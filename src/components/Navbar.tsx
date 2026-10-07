@@ -6,7 +6,11 @@ import './Navbar.css';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const isHomePage = window.location.pathname === '/';
   const isAboutPage = window.location.pathname === '/about';
+  const isWorkPage = window.location.pathname === '/work';
+  const isContactPage = window.location.pathname === '/contact' || window.location.pathname === '/contact-sent' || window.location.pathname === '/contact/sent';
+  const contactHref = isHomePage ? '#contact' : '/contact';
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -21,19 +25,16 @@ export const Navbar: React.FC = () => {
         <nav aria-label="Main Navigation">
           <ul className="navbar-links">
             <li>
-              <a href="/" className={`nav-link ${!isAboutPage ? 'active' : ''}`}>Home</a>
+              <a href="/" className={`nav-link ${isHomePage ? 'active' : ''}`}>Home</a>
             </li>
             <li>
               <a href="/about" className={`nav-link ${isAboutPage ? 'active' : ''}`}>About Me</a>
             </li>
             <li>
-              <a href="#work" className="nav-link">Work</a>
+              <a href="/work" className={`nav-link ${isWorkPage ? 'active' : ''}`}>Work</a>
             </li>
             <li>
-              <a href="#philosophy" className="nav-link">Thinking</a>
-            </li>
-            <li>
-              <a href="#contact" className="nav-link">Contact</a>
+              <a href={contactHref} className={`nav-link ${isContactPage ? 'active' : ''}`}>Contact</a>
             </li>
           </ul>
         </nav>
@@ -69,13 +70,10 @@ export const Navbar: React.FC = () => {
             <a href="/about" className="mobile-nav-link" onClick={() => setIsOpen(false)}>About Me</a>
           </li>
           <li>
-            <a href="#work" className="mobile-nav-link" onClick={() => setIsOpen(false)}>Work</a>
+            <a href="/work" className="mobile-nav-link" onClick={() => setIsOpen(false)}>Work</a>
           </li>
           <li>
-            <a href="#philosophy" className="mobile-nav-link" onClick={() => setIsOpen(false)}>Thinking</a>
-          </li>
-          <li>
-            <a href="#contact" className="mobile-nav-link" onClick={() => setIsOpen(false)}>Contact</a>
+            <a href={contactHref} className="mobile-nav-link" onClick={() => setIsOpen(false)}>Contact</a>
           </li>
         </ul>
         <div className="mobile-actions">

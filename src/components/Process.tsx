@@ -42,9 +42,6 @@ export const Process: React.FC = () => {
         <div className="process-header">
           <span className="eyebrow">HOW I WORK</span>
           <h2 className="process-title">From ambiguity to clarity.</h2>
-          <p className="process-subtitle">
-            Good product design isn't just what happens on a screen. It's what happens before, after, and around it.
-          </p>
         </div>
 
         <div className="process-grid">
@@ -57,9 +54,6 @@ export const Process: React.FC = () => {
           ))}
         </div>
 
-        <p className="process-bottom-note">
-          In intelligent systems, I add one more rule: people stay in control, and the system's behavior, feedback, and decisions are easy to understand.
-        </p>
       </div>
     </section>
   );

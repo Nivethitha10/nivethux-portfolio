@@ -1,117 +1,117 @@
 .process-section {
-  padding-top: 5rem;
-  padding-bottom: 5.5rem;
-  background-color: #f8fafc;
+  padding: 100px 0;
+  background: #f8fafc;
+}
+
+.process-section .container {
+  max-width: 1280px;
+  padding: 0 80px;
 }
 
 .process-header {
-  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 56px;
+}
+
+.process-header .eyebrow {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.5px;
 }
 
 .process-title {
-  font-size: 2.375rem;
-  font-weight: 800;
-  color: var(--text-title);
-  letter-spacing: -0.03em;
-  margin-top: 0.25rem;
+  margin: 0;
+  color: #0f172a;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: -1px;
 }
 
-.process-subtitle {
-  font-size: 1.0625rem;
-  color: var(--text-body);
-  margin-top: 0.5rem;
-  max-width: 650px;
-}
-
-/* 5 Steps Grid */
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.25rem;
-  margin-bottom: 2.5rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .process-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-card);
-  border-radius: var(--radius-xl);
-  padding: 1.75rem 1.25rem;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow-card);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  gap: 20px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .process-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--primary-border);
-  box-shadow: var(--shadow-card-hover);
+  border-color: #99d5cf;
+  transform: translateY(-2px);
 }
 
 .process-step-number {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--primary);
-  margin-bottom: 1rem;
-  line-height: 1;
+  color: #0d9488;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: -0.5px;
 }
 
 .process-step-title {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: var(--text-title);
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.015em;
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
 }
 
 .process-step-text {
-  font-size: 0.8125rem;
-  line-height: 1.6;
-  color: var(--text-body);
+  color: #64748b;
+  font-size: 14px;
+  line-height: 20px;
 }
 
-/* Bottom Callout Note */
-.process-bottom-note {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
+@media (max-width: 1050px) {
+  .process-section .container {
+    padding: 0 32px;
+  }
 
-/* Responsive Breakpoints */
-@media (max-width: 1024px) {
   .process-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
+  .process-section {
+    padding: 56px 0;
+  }
+
+  .process-section .container {
+    padding: 0 20px;
+  }
+
   .process-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  
-  .process-card:last-child {
-    grid-column: span 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
   }
 
-  .process-bottom-note {
-    text-align: left;
-  }
-}
-
-@media (max-width: 520px) {
-  .process-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .process-card:last-child {
-    grid-column: span 1;
+  .process-card {
+    padding: 20px;
+    gap: 14px;
   }
 
   .process-title {
-    font-size: 1.875rem;
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-grid {
+    grid-template-columns: 1fr;
   }
 }

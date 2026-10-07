@@ -1,125 +1,135 @@
 .philosophy-section {
-  padding-top: 5rem;
-  padding-bottom: 5.5rem;
-  background-color: #ffffff;
+  padding: 80px 0;
+  background: #fff;
+}
+
+.philosophy-section .container {
+  max-width: 1280px;
+  padding: 0 80px;
 }
 
 .philosophy-header {
-  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.philosophy-header .eyebrow {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.5px;
 }
 
 .philosophy-title {
-  font-size: 2.375rem;
-  font-weight: 800;
-  color: var(--text-title);
-  letter-spacing: -0.03em;
-  margin-top: 0.25rem;
+  margin: 0;
+  color: #0f172a;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: -1px;
 }
 
 .philosophy-subtitle {
-  font-size: 1.0625rem;
-  color: var(--text-body);
-  margin-top: 0.5rem;
-  max-width: 600px;
+  max-width: 650px;
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 20px;
 }
 
-/* 3 Cards Grid */
 .philosophy-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
 }
 
 .philosophy-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-card);
-  border-radius: var(--radius-xl);
-  padding: 2.25rem 2rem;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow-card);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  gap: 24px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .philosophy-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--primary-border);
-  box-shadow: var(--shadow-card-hover);
+  border-color: #99d5cf;
+  transform: translateY(-2px);
 }
 
-/* Icon Badge */
 .philosophy-icon-badge {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-md);
-  background-color: var(--primary-light);
-  color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
-  transition: all 0.25s ease;
-}
-
-.philosophy-card:hover .philosophy-icon-badge {
-  background-color: var(--primary);
-  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  color: #0d9488;
+  background: #f1f5f9;
+  border-radius: 12px;
 }
 
 .philosophy-card-title {
-  font-size: 1.375rem;
-  font-weight: 700;
-  color: var(--text-title);
-  margin-bottom: 0.875rem;
-  letter-spacing: -0.02em;
+  color: #0f172a;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.philosophy-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
 }
 
 .philosophy-card-text {
-  font-size: 0.9375rem;
-  line-height: 1.65;
-  color: var(--text-body);
-  margin-bottom: 1.75rem;
-  flex-grow: 1;
+  color: #0f172a;
+  font-size: 14px;
+  line-height: 20px;
 }
 
-/* Pill Tags */
 .philosophy-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 8px;
 }
 
 .philosophy-tag {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  background-color: var(--bg-subtle);
-  border: 1px solid var(--border-light);
-  padding: 0.3125rem 0.75rem;
-  border-radius: var(--radius-pill);
-  letter-spacing: 0.01em;
-  transition: all 0.2s ease;
+  padding: 6px 12px;
+  color: #334155;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
-.philosophy-card:hover .philosophy-tag {
-  border-color: rgba(0, 130, 114, 0.25);
-  color: var(--primary-hover);
+@media (max-width: 1000px) {
+  .philosophy-section .container {
+    padding: 0 32px;
+  }
 }
 
-/* Responsive adjustments */
-@media (max-width: 960px) {
+@media (max-width: 760px) {
+  .philosophy-section {
+    padding: 56px 0;
+  }
+
+  .philosophy-section .container {
+    padding: 0 20px;
+  }
+
   .philosophy-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
-}
 
-@media (max-width: 640px) {
-  .philosophy-card {
-    padding: 1.75rem 1.5rem;
-  }
-  
   .philosophy-title {
-    font-size: 1.875rem;
+    font-size: 30px;
+    line-height: 38px;
   }
 }
