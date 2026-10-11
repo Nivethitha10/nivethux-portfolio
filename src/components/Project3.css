@@ -23,7 +23,7 @@
 
 /* Hero */
 .p3-hero { background: #fff; }
-.p3-hero-inner { display: grid; width: min(1104px, calc(100% - 64px)); min-height: 746px; grid-template-columns: 400px 640px; align-items: center; gap: 64px; margin: auto; padding-block: 112px 100px; }
+.p3-hero-inner { display: grid; width: min(1104px, calc(100% - 64px)); min-height: 746px; grid-template-columns: minmax(0, 5fr) minmax(0, 8fr); align-items: center; gap: clamp(32px, 5vw, 64px); margin: auto; padding-block: 112px 100px; }
 .p3-hero-copy { display: flex; min-width: 0; flex-direction: column; align-items: flex-start; gap: 24px; }
 .p3-hero-copy > .p3-label { color: var(--p3-teal); font-family: 'Geist', Arial, sans-serif; font-size: 14px; line-height: 18px; letter-spacing: .2em; }
 .p3-hero-copy h1 { color: var(--p3-ink); font-family: 'Geist', Arial, sans-serif; font-size: 48px; font-weight: 800; line-height: 56px; letter-spacing: -1.5px; }
@@ -41,19 +41,20 @@
 
 /* Context and user */
 .p3-problem { background: #f8fafc; }
-.p3-problem-grid { display: grid; grid-template-columns: 140px minmax(0, 880px); gap: 72px; padding-block: 112px; }
+.p3-problem-grid { display: grid; grid-template-columns: minmax(0, 140px) minmax(0, 1fr); gap: clamp(24px, 6vw, 72px); padding-block: 112px; }
 .p3-section-number { color: var(--p3-secondary); font-family: 'Geist', Arial, sans-serif; font-size: 14px; line-height: 20px; }
 .p3-problem-grid h2 { color: var(--p3-ink); font-family: 'Geist', Arial, sans-serif; font-size: 36px; font-weight: 600; line-height: 44px; letter-spacing: -1px; }
 .p3-problem-grid p { margin-top: 26px; color: var(--p3-secondary); font-family: 'Geist', Arial, sans-serif; font-size: 16px; line-height: 24px; }
 .p3-user { background: #fff; }
-.p3-user-grid { display: grid; grid-template-columns: minmax(0, 712px) 320px; align-items: center; gap: 72px; padding-block: 112px; }
+.p3-user-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 320px); align-items: center; gap: clamp(32px, 5.625vw, 72px); padding-block: 112px; }
+.p3-user-copy { min-width: 0; }
 .p3-user-copy .p3-section-intro h2 { font-size: 50px; }
 .p3-user-copy .p3-section-intro > p { color: var(--p3-secondary); }
 .p3-check-list { display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0; list-style: none; }
 .p3-user-copy .p3-check-list { margin-top: 28px; }
 .p3-check-list li { display: flex; align-items: center; gap: 12px; color: var(--p3-ink); font-size: 15px; line-height: 1.45; }
 .p3-check-list svg { width: 18px; height: 18px; flex: 0 0 18px; padding: 3px; border-radius: 50%; color: #fff; background: var(--p3-teal); stroke-width: 3; }
-.p3-user-device { width: 320px; }
+.p3-user-device { width: 100%; max-width: 320px; }
 
 /* Working approach and principles */
 .p3-approach, .p3-principles { padding-block: 112px; background: #fff; }
@@ -79,7 +80,7 @@
 .p3-chapters { display: flex; flex-direction: column; gap: 0; margin-top: 64px; }
 .p3-chapter { background: #f8fafc; }
 .p3-chapter:nth-child(even) { background: #fff; }
-.p3-chapter-inner { display: grid; width: min(1104px, calc(100% - 64px)); min-height: 920px; grid-template-columns: 320px minmax(0, 696px); align-items: center; gap: 88px; margin-inline: auto; padding-block: 90px; }
+.p3-chapter-inner { display: grid; width: min(1104px, calc(100% - 64px)); min-height: 920px; grid-template-columns: minmax(0, 320fr) minmax(0, 696fr); align-items: center; gap: clamp(32px, 6.875vw, 88px); margin-inline: auto; padding-block: 90px; }
 .p3-chapter--reverse .p3-device-story { grid-column: 2; grid-row: 1; }
 .p3-chapter--reverse .p3-chapter-copy { grid-column: 1; grid-row: 1; }
 .p3-chapter-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
@@ -158,7 +159,7 @@
   .p3-hero-inner { grid-template-columns: minmax(0, .82fr) minmax(0,1.18fr); gap: 34px; }
   .p3-hero-devices { gap: 12px; }
   .p3-hero-devices .p3-device-story { width: calc(50% - 6px); }
-  .p3-user-grid { grid-template-columns: minmax(0,1fr) 280px; gap: 40px; }
+  .p3-user-grid { grid-template-columns: minmax(0,1fr) minmax(0,280px); gap: 40px; }
   .p3-user-grid .p3-device-story { width: 280px; }
   .p3-chapter-inner { grid-template-columns: 280px minmax(0,1fr); gap: 56px; }
   .p3-chapter-inner > .p3-device-story { width: 280px; }
@@ -243,7 +244,7 @@
   .p3-problem-grid { gap: 16px; padding-block: 48px; }
   .p3-problem-grid h2 { font-size: 28px; line-height: 1.2; }
   .p3-problem-grid p { margin-top: 16px; font-size: 15px; line-height: 1.6; }
-  .p3-user-grid { grid-template-columns: 1fr; gap: 32px; padding-block: 52px; }
+  .p3-user-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-block: 52px; }
   .p3-user-copy .p3-section-intro h2 { font-size: 36px; }
   .p3-user-grid .p3-device-story { width: min(290px, 100%); justify-self: center; }
   .p3-approach, .p3-principles, .p3-visual-system, .p3-outcome, .p3-overview, .p3-edge, .p3-decision { padding-block: 52px; }
@@ -252,7 +253,7 @@
   .p3-principles { padding-top: 28px; }
   .p3-flow { padding-top: 52px; }
   .p3-chapters { margin-top: 36px; }
-  .p3-chapter-inner { width: 100%; grid-template-columns: 1fr; gap: 28px; padding: 40px 20px; }
+  .p3-chapter-inner { width: 100%; min-width: 0; grid-template-columns: minmax(0, 1fr); gap: 28px; padding: 40px 20px; }
   .p3-chapter--reverse .p3-device-story, .p3-chapter--reverse .p3-chapter-copy { grid-column: auto; grid-row: auto; }
   .p3-chapter-inner > .p3-device-story { width: min(320px, 100%); justify-self: center; }
   .p3-chapter-copy { width: min(100%, 520px); margin-inline: auto; }

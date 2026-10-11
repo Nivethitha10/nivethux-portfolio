@@ -7,7 +7,6 @@
   --golf-orange: #f28c3c;
   --golf-cream: #fbf6ee;
   width: 100%;
-  overflow: hidden;
   color: var(--golf-ink);
   background: #fff;
   font-family: 'Inter', 'Geist', Arial, sans-serif;
@@ -113,7 +112,7 @@
 .golf-trust-note span { color: var(--golf-body); font-size: 14px; font-weight: 600; line-height: 20px; }
 .golf-device-story { display: flex; width: 335px; flex-direction: column; align-items: center; gap: 12px; margin: 0; }
 .golf-phone { width: 335px; height: 680px; padding: 0; overflow: visible; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
-.golf-phone img { display: block; width: 100%; height: 100%; border-radius: 0; object-fit: contain; object-position: center top; }
+.golf-phone img { display: block; width: 100%; max-width: 100%; height: auto; border-radius: 0; object-fit: contain; object-position: center top; }
 .golf-device-story figcaption { color: var(--golf-muted); font-size: 12px; line-height: 18px; text-align: center; }
 
 /* Outcome, reflection, footer */
@@ -205,8 +204,9 @@
   .golf-chapter--reverse .golf-device-story, .golf-chapter--reverse .golf-chapter-notes { grid-column: auto; grid-row: auto; }
   .golf-chapter--reverse .golf-device-story { order: 0; }
   .golf-chapter--reverse .golf-chapter-notes { order: 1; }
-  .golf-device-story, .golf-phone { width: min(335px,100%); }
-  .golf-phone { height: auto; aspect-ratio: 335 / 680; }
+  .golf-device-story, .golf-phone { width: min(250px,100%); }
+  .golf-device-story { justify-self: center; }
+  .golf-phone { height: auto; aspect-ratio: auto; }
   .golf-chapter-notes { gap: 17px; }
   .golf-chapter-notes h3 { font-size: 27px; }
   .golf-outcome { padding-block: 56px; }

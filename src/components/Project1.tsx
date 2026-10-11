@@ -1,11 +1,11 @@
 import React from 'react';
 import heroImage from '../../Images/Project1HeroImage.png';
+import tatSummaryImage from '../../Images/TATSummary.png';
 import './Project1.css';
 
 const transactionSummaryImage = '/assets/banking-view1-figma.png';
 const tradingOverviewImage = '/assets/banking-view2-figma.png';
 const islamicPortfolioImage = '/assets/banking-view3-figma.png';
-const tatSummaryImage = '/assets/banking-view4-figma.png';
 const supplierAnalysisImage = '/assets/banking-view5-figma.png';
 
 const outputs = [

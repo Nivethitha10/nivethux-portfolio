@@ -5,7 +5,6 @@
   --warehouse-line: #e2e8f0;
   --warehouse-teal: #0d9488;
   width: 100%;
-  overflow: hidden;
   color: var(--warehouse-ink);
   background: #fff;
 }
