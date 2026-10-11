@@ -5,9 +5,8 @@ import resumeUrl from '../../Resume/Nivethitha_Resume_5yrsExp.pdf';
 import { routes } from '../routes';
 import './Navbar.css';
 
-export const Navbar: React.FC = () => {
+export const Navbar: React.FC<{ pathname: string }> = ({ pathname }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = window.location.pathname;
   const isHomePage = pathname === routes.home;
   const isAboutPage = pathname === routes.about;
   const isWorkPage = pathname === routes.work;

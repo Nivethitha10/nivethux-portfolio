@@ -8,14 +8,14 @@
 /golf-app-ai-concierge/                     /golf-app-ai-concierge 301
 /site-assets/                               /site-assets 301
 
-/about                                      /index.html    200
-/work                                       /index.html    200
-/contact                                    /index.html    200
-/contact/thank-you                         /index.html    200
-/enterprise-banking-platform               /index.html    200
-/warehouse-operations-material-movement    /index.html    200
-/agtech-strip-test-field-quality           /index.html    200
-/golf-app-ai-concierge                     /index.html    200
-/site-assets                               /index.html    200
+/about                                      /about/index.html                                      200
+/work                                       /work/index.html                                       200
+/contact                                    /contact/index.html                                    200
+/contact/thank-you                         /contact/thank-you/index.html                         200
+/enterprise-banking-platform               /enterprise-banking-platform/index.html               200
+/warehouse-operations-material-movement    /warehouse-operations-material-movement/index.html    200
+/agtech-strip-test-field-quality           /agtech-strip-test-field-quality/index.html           200
+/golf-app-ai-concierge                     /golf-app-ai-concierge/index.html                     200
+/site-assets                               /site-assets/index.html                               200
 
-/*    /index.html    404
+/*    /404.html    404
