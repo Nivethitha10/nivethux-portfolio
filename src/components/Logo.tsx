@@ -1,5 +1,6 @@
 import React from 'react';
 import logoImage from '../../Icons/Logo.png';
+import { routes } from '../routes';
 
 interface LogoProps {
   size?: 'normal' | 'large';
@@ -10,7 +11,7 @@ export const Logo: React.FC<LogoProps> = ({ size = 'normal', className = '' }) =
   const isLarge = size === 'large';
   
   return (
-    <a href="#" className={`logo-brand ${className}`} style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}>
+    <a href={routes.home} className={`logo-brand ${className}`} style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}>
       <img
         src={logoImage}
         alt="NivethUX"

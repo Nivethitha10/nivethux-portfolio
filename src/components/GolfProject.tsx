@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, X } from 'lucide-react';
+import { routes } from '../routes';
 import './GolfProject.css';
 
 const screen = (index: number) => `/assets/golf/screen-${String(index).padStart(2, '0')}.png`;
@@ -86,5 +87,5 @@ export const GolfProject: React.FC = () => <main className="golf-project" id="go
     <div className="golf-test-plan"><article className="golf-participants"><span>Participants</span><strong>12</strong><p>4 members · 3 first-time visitors · 3 group organizers · 2 clubhouse staff</p></article><div className="golf-measures">{measures.map(([n,title,copy])=><article key={n}><small>{n}</small><div><h3>{title}</h3><p>{copy}</p></div></article>)}</div></div>
   </div></section>
   <section className="golf-reflection"><div className="golf-wrap"><div className="golf-reflection-marker"><span className="golf-reflection-tag">Reflection <X aria-hidden="true"/></span><span>GOLF · 2026</span></div><blockquote>Trust comes from small honest states—held, expired, pending, refunded.</blockquote><div className="golf-reflection-details"><p>These moments matter more than adding features. They are where a concierge proves whether it understands the plan, the money, and the people involved.</p><p>I would bring venue staff in earlier because the clubhouse service handshake is part of the product—not an edge case after the interface is done.</p></div></div></section>
-  <section className="golf-project-footer"><div className="golf-wrap"><div className="golf-project-heading"><div className="golf-project-close"><small>Case study complete</small><h2>Golf</h2></div><nav aria-label="Project navigation"><a href="/work">← Previous project</a><a href="/project-3">Next project →</a></nav></div><div className="golf-legal"><span>Product design portfolio · 2026</span><span>Made with care for the full service journey.</span></div></div></section>
+  <section className="golf-project-footer"><div className="golf-wrap"><div className="golf-project-heading"><div className="golf-project-close"><small>Case study complete</small><h2>Golf</h2></div><nav aria-label="Project navigation"><a href={routes.work}>← Previous project</a><a href={routes.agtechStripTest}>Next project →</a></nav></div><div className="golf-legal"><span>Product design portfolio · 2026</span><span>Made with care for the full service journey.</span></div></div></section>
 </main>;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Logo } from './Logo';
+import { routes } from '../routes';
 import behanceIcon from '../../Icons/Behance.png';
 import dribbbleIcon from '../../Icons/Dribbble.png';
 import instagramIcon from '../../Icons/Instagram.png';
@@ -24,16 +25,16 @@ export const Footer: React.FC = () => {
             <div className="footer-col-header">Menu</div>
             <ul className="footer-links-list">
               <li>
-                <a href="/" className="footer-link">Home</a>
+                <a href={routes.home} className="footer-link">Home</a>
               </li>
               <li>
-                <a href="/work" className="footer-link">Work</a>
+                <a href={routes.work} className="footer-link">Work</a>
               </li>
               <li>
-                <a href="/about" className="footer-link">About Me</a>
+                <a href={routes.about} className="footer-link">About Me</a>
               </li>
               <li>
-                <a href="/contact" className="footer-link">Contact</a>
+                <a href={routes.contact} className="footer-link">Contact</a>
               </li>
             </ul>
           </div>

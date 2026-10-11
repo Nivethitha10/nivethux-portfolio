@@ -1,4 +1,5 @@
 import React from 'react';
+import { routes } from '../routes';
 import './ErrorPage.css';
 
 export const ErrorPage: React.FC = () => (
@@ -11,8 +12,8 @@ export const ErrorPage: React.FC = () => (
       <h1 id="not-found-title">404 — This thread got lost.</h1>
       <p className="not-found-description">The page you're looking for doesn't exist, or the link's out of date.</p>
       <div className="not-found-actions">
-        <a className="not-found-primary" href="/">Back to home <span aria-hidden="true">→</span></a>
-        <a className="not-found-secondary" href="/work">View work <span aria-hidden="true">→</span></a>
+        <a className="not-found-primary" href={routes.home}>Back to home <span aria-hidden="true">→</span></a>
+        <a className="not-found-secondary" href={routes.work}>View work <span aria-hidden="true">→</span></a>
       </div>
     </section>
   </main>

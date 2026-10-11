@@ -1,6 +1,7 @@
 import React from 'react';
 import { MailCheck } from 'lucide-react';
 import resumeUrl from '../../Resume/Nivethitha_Resume_5yrsExp.pdf';
+import { routes } from '../routes';
 import './ContactSentPage.css';
 
 export const ContactSentPage: React.FC = () => (
@@ -21,7 +22,7 @@ export const ContactSentPage: React.FC = () => (
         <div className="message-confirmation-icon"><MailCheck size={24} strokeWidth={1.8} aria-hidden="true" /></div>
         <span className="message-sent-status"><i aria-hidden="true" />Message sent</span>
         <h2>Message sent — I’ll get back to you soon</h2>
-        <a className="message-sent-action" href="/work">View work →</a>
+        <a className="message-sent-action" href={routes.work}>View work →</a>
       </div>
 
       <aside className="contact-sent-direct">

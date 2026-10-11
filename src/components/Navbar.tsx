@@ -2,15 +2,17 @@ import React, { useState } from 'react';
 import { Download } from 'lucide-react';
 import { Logo } from './Logo';
 import resumeUrl from '../../Resume/Nivethitha_Resume_5yrsExp.pdf';
+import { routes } from '../routes';
 import './Navbar.css';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const isHomePage = window.location.pathname === '/';
-  const isAboutPage = window.location.pathname === '/about';
-  const isWorkPage = window.location.pathname === '/work';
-  const isContactPage = window.location.pathname === '/contact' || window.location.pathname === '/contact-sent' || window.location.pathname === '/contact/sent';
-  const contactHref = isHomePage ? '#contact' : '/contact';
+  const pathname = window.location.pathname;
+  const isHomePage = pathname === routes.home;
+  const isAboutPage = pathname === routes.about;
+  const isWorkPage = pathname === routes.work;
+  const isContactPage = pathname === routes.contact || pathname === routes.contactThankYou;
+  const contactHref = isHomePage ? '#contact' : routes.contact;
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -25,13 +27,13 @@ export const Navbar: React.FC = () => {
         <nav aria-label="Main Navigation">
           <ul className="navbar-links">
             <li>
-              <a href="/" className={`nav-link ${isHomePage ? 'active' : ''}`}>Home</a>
+              <a href={routes.home} className={`nav-link ${isHomePage ? 'active' : ''}`}>Home</a>
             </li>
             <li>
-              <a href="/about" className={`nav-link ${isAboutPage ? 'active' : ''}`}>About Me</a>
+              <a href={routes.about} className={`nav-link ${isAboutPage ? 'active' : ''}`}>About Me</a>
             </li>
             <li>
-              <a href="/work" className={`nav-link ${isWorkPage ? 'active' : ''}`}>Work</a>
+              <a href={routes.work} className={`nav-link ${isWorkPage ? 'active' : ''}`}>Work</a>
             </li>
             <li>
               <a href={contactHref} className={`nav-link ${isContactPage ? 'active' : ''}`}>Contact</a>
@@ -64,13 +66,13 @@ export const Navbar: React.FC = () => {
       <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
         <ul className="mobile-nav-links">
           <li>
-            <a href="/" className="mobile-nav-link" onClick={() => setIsOpen(false)}>Home</a>
+            <a href={routes.home} className="mobile-nav-link" onClick={() => setIsOpen(false)}>Home</a>
           </li>
           <li>
-            <a href="/about" className="mobile-nav-link" onClick={() => setIsOpen(false)}>About Me</a>
+            <a href={routes.about} className="mobile-nav-link" onClick={() => setIsOpen(false)}>About Me</a>
           </li>
           <li>
-            <a href="/work" className="mobile-nav-link" onClick={() => setIsOpen(false)}>Work</a>
+            <a href={routes.work} className="mobile-nav-link" onClick={() => setIsOpen(false)}>Work</a>
           </li>
           <li>
             <a href={contactHref} className="mobile-nav-link" onClick={() => setIsOpen(false)}>Contact</a>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { routes } from '../routes';
 import './About.css';
 
 export const About: React.FC = () => {
@@ -25,7 +26,7 @@ export const About: React.FC = () => {
             <p className="about-bio-text">
               I find the threads between users, technology, and business needs. My work centers on taking highly ambiguous, data-dense workflows and turning them into straightforward, reliable experiences. I believe good UX is not just about making interfaces beautiful, but making deep technical systems genuinely accessible and clear.
             </p>
-            <a href="/about" className="about-link">
+            <a href={routes.about} className="about-link">
               <span>Learn More About My Story</span>
               <ArrowRight size={16} />
             </a>

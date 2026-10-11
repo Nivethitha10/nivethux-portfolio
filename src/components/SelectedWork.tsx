@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import { routes } from '../routes';
 import './SelectedWork.css';
 
 interface Project {
@@ -20,7 +21,7 @@ const projects: Project[] = [
     number: '01',
     title: 'Enterprise Banking Platform',
     description: 'Designing role-based financial workflows for complex monitoring and transaction operations. Turning dense data into clear, decision-ready experiences.',
-    link: '/project-1'
+    link: routes.enterpriseBanking
   },
   {
     id: 'inventory',
@@ -29,7 +30,7 @@ const projects: Project[] = [
     number: '02',
     title: 'Warehouse Operations & Material Movement',
     description: 'State-driven scanning workflows for line workers — moving, tracking, and dispatching material with zero room for error.',
-    link: '/project-2'
+    link: routes.warehouseOperations
   },
   {
     id: 'strip-test',
@@ -38,7 +39,7 @@ const projects: Project[] = [
     number: '03',
     title: 'Strip Test',
     description: 'Helping farmers and agronomists score field quality in minutes — guided sampling built for the field, not the office.',
-    link: '/project-3'
+    link: routes.agtechStripTest
   }
 ];
 
@@ -51,7 +52,7 @@ export const SelectedWork: React.FC = () => {
             <span className="eyebrow">SELECTED WORK</span>
             <h2 className="selected-work-title">Following the thread.</h2>
           </div>
-          <a href="/work" className="btn-explore-all">
+          <a href={routes.work} className="btn-explore-all">
             <span>See more</span>
             <ArrowUpRight size={16} />
           </a>

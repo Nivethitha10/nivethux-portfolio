@@ -1,4 +1,5 @@
 import React from 'react';
+import { routes } from '../routes';
 import './WorkPage.css';
 
 interface WorkProject {
@@ -22,7 +23,7 @@ const projects: WorkProject[] = [
     focus: 'Information architecture · Bilingual RTL · High-density data',
     image: '/assets/work-banking.jpg',
     imageAlt: 'Enterprise banking dashboard shown on a laptop',
-    href: '/project-1',
+    href: routes.enterpriseBanking,
     caption: 'Recreated visual · Representative data',
   },
   {
@@ -33,7 +34,7 @@ const projects: WorkProject[] = [
     focus: 'Scan-first interaction design · Error recovery · Hardware-constrained UI',
     image: '/assets/project-warehouse.png',
     imageAlt: 'Warehouse worker scanning a package between storage racks',
-    href: '/project-2',
+    href: routes.warehouseOperations,
   },
   {
     number: '03',
@@ -43,7 +44,7 @@ const projects: WorkProject[] = [
     focus: 'Offline-first · Multilingual · Guided data capture',
     image: '/assets/project-strip-test.png',
     imageAlt: 'Agricultural field testing dashboard shown on a mobile phone',
-    href: '/project-3',
+    href: routes.agtechStripTest,
   },
   {
     number: '04',
@@ -53,7 +54,7 @@ const projects: WorkProject[] = [
     focus: 'Conversational flows · Group coordination · Booking & payments',
     image: '/assets/work-golf.jpg',
     imageAlt: 'Golf equipment and a golf app displayed on a phone',
-    href: '/project-4',
+    href: routes.golfApp,
   },
 ];
 

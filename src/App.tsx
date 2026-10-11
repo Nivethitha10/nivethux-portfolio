@@ -16,32 +16,34 @@ import { ContactPage } from './components/ContactPage';
 import { ContactSentPage } from './components/ContactSentPage';
 import { ErrorPage } from './components/ErrorPage';
 import { SiteAssetsPage } from './components/SiteAssetsPage';
+import { routes } from './routes';
 
 export function App() {
-  const isAboutPage = window.location.pathname === '/about';
-  const isWorkPage = window.location.pathname === '/work';
-  const isContactPage = window.location.pathname === '/contact';
-  const isContactSentPage = window.location.pathname === '/contact-sent' || window.location.pathname === '/contact/sent';
-  const isProject1Page = window.location.pathname === '/project-1';
-  const isProject2Page = window.location.pathname === '/project-2';
-  const isProject3Page = window.location.pathname === '/project-3';
-  const isProject4Page = window.location.pathname === '/project-4';
-  const isHomePage = window.location.pathname === '/';
-  const isSiteAssetsPage = window.location.pathname === '/site-assets';
+  const pathname = window.location.pathname;
+  const page = pathname === routes.about ? <AboutPage />
+    : pathname === routes.work ? <WorkPage />
+    : pathname === routes.contact ? <ContactPage />
+    : pathname === routes.contactThankYou ? <ContactSentPage />
+    : pathname === routes.enterpriseBanking ? <Project1 />
+    : pathname === routes.warehouseOperations ? <Project2 />
+    : pathname === routes.agtechStripTest ? <Project3 />
+    : pathname === routes.golfApp ? <GolfProject />
+    : pathname === routes.siteAssets ? <SiteAssetsPage />
+    : pathname === routes.home ? (
+      <main>
+        <Hero />
+        <SelectedWork />
+        <Philosophy />
+        <Process />
+        <About />
+        <CtaBanner />
+      </main>
+    ) : <ErrorPage />;
 
   return (
     <div className="portfolio-app">
       <Navbar />
-      {isAboutPage ? <AboutPage /> : isWorkPage ? <WorkPage /> : isContactSentPage ? <ContactSentPage /> : isContactPage ? <ContactPage /> : isProject1Page ? <Project1 /> : isProject2Page ? <Project2 /> : isProject3Page ? <Project3 /> : isProject4Page ? <GolfProject /> : isSiteAssetsPage ? <SiteAssetsPage /> : isHomePage ? (
-        <main>
-          <Hero />
-          <SelectedWork />
-          <Philosophy />
-          <Process />
-          <About />
-          <CtaBanner />
-        </main>
-      ) : <ErrorPage />}
+      {page}
       <Footer />
     </div>
   );
