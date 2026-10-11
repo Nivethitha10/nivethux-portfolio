@@ -28,16 +28,16 @@
 }
 
 .about-page-photo {
-  height: 360px;
+  aspect-ratio: 884 / 664;
   overflow: hidden;
   border-radius: 16px;
   box-shadow: var(--shadow-card);
 }
 
 .about-page-photo img {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -115,7 +115,7 @@
 @media (min-width: 769px) {
   .about-page-hero-inner, .about-page-section-inner { padding-inline: 40px; padding-block: 64px; }
   .about-page-hero-inner { flex-direction: row; align-items: center; gap: 32px; }
-  .about-page-photo { flex: 0 0 240px; height: 240px; }
+  .about-page-photo { flex: 0 0 240px; }
   .about-page-intro { flex: 1; }
   .about-page h1 { font-size: 32px; }
   .about-value-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
@@ -136,7 +136,7 @@
 @media (min-width: 1440px) {
   .about-page-hero-inner, .about-page-section-inner { padding-inline: 96px; padding-block: 96px; }
   .about-page-hero-inner { gap: 64px; }
-  .about-page-photo { flex-basis: 480px; height: 520px; border-radius: 16px; }
+  .about-page-photo { flex-basis: 480px; border-radius: 16px; }
   .about-page-intro { gap: 24px; }
   .about-page-kicker { font-size: 14px; letter-spacing: 3px; }
   .about-page h1 { font-size: 56px; line-height: 64px; }
@@ -168,7 +168,7 @@
 @media (min-width: 1920px) {
   .about-page-hero-inner, .about-page-section-inner { padding-inline: 160px; padding-block: 120px; }
   .about-page-hero-inner { gap: 96px; }
-  .about-page-photo { flex-basis: 560px; height: 600px; border-radius: 24px; }
+  .about-page-photo { flex-basis: 560px; border-radius: 24px; }
   .about-page-intro { gap: 32px; }
   .about-page h1 { font-size: 72px; line-height: 80px; }
   .about-page-kicker { font-size: 16px; letter-spacing: 4px; }
