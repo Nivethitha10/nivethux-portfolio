@@ -17,7 +17,7 @@ import { ContactPage } from './components/ContactPage';
 import { ContactSentPage } from './components/ContactSentPage';
 import { ErrorPage } from './components/ErrorPage';
 import { SiteAssetsPage } from './components/SiteAssetsPage';
-import { routes } from './routes';
+import { normalizeRoutePath, routes } from './routes';
 import { getPageMetadata } from './seo';
 
 const siteOrigin = 'https://nivethux.com';
@@ -35,7 +35,7 @@ function setMeta(selector: string, attribute: 'name' | 'property', key: string, 
 }
 
 export function App({ initialPath }: { initialPath: string }) {
-  const [pathname, setPathname] = useState(initialPath);
+  const [pathname, setPathname] = useState(() => normalizeRoutePath(initialPath));
   const metadata = getPageMetadata(pathname);
 
   useIsomorphicLayoutEffect(() => {
@@ -72,7 +72,7 @@ export function App({ initialPath }: { initialPath: string }) {
 
   useEffect(() => {
     const knownRoutes = Object.values(routes);
-    const handlePopState = () => setPathname(window.location.pathname);
+    const handlePopState = () => setPathname(normalizeRoutePath(window.location.pathname));
     const handleClick = (event: MouseEvent) => {
       if (
         event.defaultPrevented ||
