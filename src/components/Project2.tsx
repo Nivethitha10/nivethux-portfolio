@@ -120,7 +120,7 @@ export const Project2: React.FC = () => <main className="project2-page" id="proj
     <div className="warehouse-content">
       <span className="warehouse-eyebrow">UX CASE STUDY // INDUSTRIAL DESIGN</span>
       <h1>Designing for Gloved Hands and a Factory Floor</h1>
-      <p className="warehouse-hero__lead">An 8-flow operational ecosystem optimized for rugged Zebra handhelds, where friction is consciously scaled to match transactional risk.</p>
+      <p className="warehouse-hero__lead">I designed warehouse workflows for material movement on rugged Zebra handhelds, balancing scan-first speed with safeguards for high-risk actions.</p>
       <div className="warehouse-meta">{meta.map(([label, value]) => <div key={label}><span>{label}</span><strong>{value}</strong></div>)}</div>
       <div className="warehouse-hero-device"><Device src={1} size="hero" alt="Warehouse operations interface displayed on a rugged Zebra handheld" /></div>
       <div className="warehouse-rule" />

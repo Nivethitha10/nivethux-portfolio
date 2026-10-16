@@ -16,7 +16,7 @@ export const Hero: React.FC = () => {
               Untangling complex systems, one interaction at a time.
             </h1>
             <p className="hero-description">
-              I'm Nivethitha, a <strong>Product Designer</strong> focused on enterprise systems, intelligent workflows, and Human-AI experiences.
+              I'm Nivethitha, a <strong>Product Designer</strong> focused on enterprise UX, intelligent workflows, and Human-AI experiences.
             </p>
             <a href="#work" className="hero-cta">
               <span>View Selected Work</span>

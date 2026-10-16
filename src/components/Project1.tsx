@@ -96,7 +96,7 @@ export const Project1: React.FC = () => {
         <div className="project1-hero-inner">
           <span className="project1-pill">Case study</span>
           <h1>Enterprise Banking Platform</h1>
-          <p className="project1-lead">Designing role-based operational experiences for enterprise banking, Sharia compliance, and multi-channel workflows.</p>
+          <p className="project1-lead">I designed role-based workflows and information architecture for an enterprise banking platform spanning Sharia finance and multi-channel operations.</p>
           <div className="project1-hero-image">
             <img src={heroImage} alt="Representative enterprise banking dashboard" />
           </div>

@@ -64,7 +64,7 @@ export const WorkPage: React.FC = () => (
       <span className="work-eyebrow">WORK</span>
       <h1 id="work-page-title">Following the thread.</h1>
       <p className="work-intro-copy">
-        A few complex problems I've had the chance to untangle — across banking, manufacturing, hospitality, and agriculture.
+        A few complex problems I've had the chance to untangle through UX and product design — across enterprise banking, warehouse workflows, hospitality, and agricultural field testing.
       </p>
       <p className="work-nda-note">
         Some projects are under NDA. Visuals are recreated with representative data and labelled as such.

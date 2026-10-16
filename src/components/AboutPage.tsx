@@ -36,7 +36,7 @@ export const AboutPage: React.FC = () => {
           <div className="about-page-intro">
             <p className="about-page-kicker">Hi, I'm Nivethitha.</p>
             <h1>Designing clarity in complexity.</h1>
-            <p className="about-page-lead">I've always been interested in the space between people and systems - the moments where a user's intention meets a complicated workflow, a confusing interface, or a system that doesn't behave as expected.</p>
+            <p className="about-page-lead">As a Product Designer, I've always been interested in the space between people and systems - the moments where a user's intention meets a complicated workflow, a confusing interface, or a system that doesn't behave as expected.</p>
             <p className="about-page-supporting">Over the past 5.2 years, I've worked across enterprise products, from financial and operational systems to AI-powered research experiences and hardware-constrained workflows.</p>
           </div>
         </div>

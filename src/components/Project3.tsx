@@ -46,7 +46,7 @@ export const Project3: React.FC = () => <main className="project3-page" id="proj
     <div className="p3-hero-inner">
       <div className="p3-hero-copy">
         <h1>Strip Test</h1>
-        <p>A field-first mobile workflow that helps agents capture consistent potato quality checks—even when location and signal are unreliable.</p>
+        <p>An agricultural field-testing app UX case study: I designed a mobile workflow for agents to verify plots, capture potato quality samples, and recover offline.</p>
         <div className="p3-tags"><span>Product design</span><span>Mobile workflow</span><span>Field operations</span></div>
         <div className="p3-hero-meta"><div><small>Role</small><b>Lead product designer</b></div><div><small>Focus</small><b>Field capture &amp; recovery</b></div><div><small>Platform</small><b>Android mobile</b></div></div>
       </div>

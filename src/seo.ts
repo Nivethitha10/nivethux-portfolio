@@ -9,18 +9,18 @@ export interface PageMetadata {
 
 const pageMetadata: Record<string, PageMetadata> = {
   [routes.home]: {
-    title: 'NivethUX | Product Designer for Enterprise Systems',
-    description: 'Nivethitha is a product designer focused on enterprise systems, intelligent workflows, and Human-AI experiences.',
+    title: 'Product Designer Portfolio | Enterprise UX & Human–AI | NivethUX',
+    description: 'Nivethitha is a Product Designer shaping enterprise UX, operational workflows, and Human–AI experiences into clear, useful products for complex systems.',
     canonicalPath: routes.home,
   },
   [routes.about]: {
-    title: 'About Nivethitha | Product Designer — NivethUX',
-    description: 'Meet Nivethitha, a product designer working across enterprise products, financial and operational systems, and human-AI experiences.',
+    title: 'About Nivethitha | Product & UX Designer | NivethUX',
+    description: 'Meet Nivethitha, a Product Designer working across enterprise UX, financial and operational systems, Human–AI experiences, and constrained workflows.',
     canonicalPath: routes.about,
   },
   [routes.work]: {
-    title: 'Product Design Case Studies | NivethUX',
-    description: 'Explore NivethUX case studies across banking, manufacturing, agriculture, and hospitality, with project visuals labelled where recreated.',
+    title: 'UX & Product Design Case Studies | NivethUX',
+    description: 'Explore UX and product design case studies spanning enterprise banking, warehouse workflows, agricultural field testing, and an AI concierge concept.',
     canonicalPath: routes.work,
   },
   [routes.contact]: {
@@ -35,23 +35,23 @@ const pageMetadata: Record<string, PageMetadata> = {
     noindex: true,
   },
   [routes.enterpriseBanking]: {
-    title: 'Enterprise Banking Platform Case Study | NivethUX',
-    description: 'A case study in role-based enterprise banking operations, Sharia compliance, and multi-channel workflows.',
+    title: 'Enterprise Banking UX Case Study | NivethUX',
+    description: 'Explore Nivethitha’s enterprise banking UX work: role-based operations, bilingual RTL and LTR architecture, Sharia finance, and workflows across teams.',
     canonicalPath: routes.enterpriseBanking,
   },
   [routes.warehouseOperations]: {
-    title: 'Warehouse Operations Case Study | NivethUX',
-    description: 'A warehouse and manufacturing case study on material movement, scanning workflows, and rugged Zebra handheld interfaces.',
+    title: 'Warehouse & Inventory UX Case Study | NivethUX',
+    description: 'Explore Nivethitha’s warehouse UX design for material movement: scan-first workflows, error recovery, and rugged Zebra handhelds for factory teams.',
     canonicalPath: routes.warehouseOperations,
   },
   [routes.agtechStripTest]: {
-    title: 'Strip Test Field Workflow Case Study | NivethUX',
-    description: 'A field-first mobile workflow for potato quality checks, with plot context, sample capture, and offline recovery.',
+    title: 'Agricultural Field Testing App UX Case Study | NivethUX',
+    description: 'A field-testing app UX case study by Nivethitha: plot verification, potato quality samples, offline recovery, and traceable reports for field agents.',
     canonicalPath: routes.agtechStripTest,
   },
   [routes.golfApp]: {
-    title: 'Golf Booking Experience Case Study | NivethUX',
-    description: 'A golf-day booking concept for tee times, group coordination, pricing, payment, and check-in.',
+    title: 'AI Golf Concierge App Design Case Study | NivethUX',
+    description: 'An AI concierge design concept for golf-day bookings, group coordination, pricing, payments, and check-in, designed by Nivethitha with clear next steps.',
     canonicalPath: routes.golfApp,
   },
   [routes.siteAssets]: {

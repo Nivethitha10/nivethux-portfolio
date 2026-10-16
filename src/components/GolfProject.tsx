@@ -50,7 +50,7 @@ export const GolfProject: React.FC = () => <main className="golf-project" id="go
       <div className="golf-banner"><img src="/assets/golf/golf-banner.png" alt="Golf course landscape"/><div className="golf-banner-shade"/></div>
       <div className="golf-project-marker"><span className="golf-category">Golf · leisure · group booking <i/></span></div>
       <h1>Golf</h1>
-      <div className="golf-promise-row"><p>An AI concierge that turns one intent into a whole golf day.</p><div className="golf-service-promise"><span>The service promise</span><div>ASK <ArrowRight/> ALIGN <ArrowRight/> BOOK <ArrowRight/> PLAY</div></div></div>
+      <div className="golf-promise-row"><p>An AI concierge design concept that turns one intent into a whole golf day, with booking, group coordination, and recovery designed around clear expectations.</p><div className="golf-service-promise"><span>The service promise</span><div>ASK <ArrowRight/> ALIGN <ArrowRight/> BOOK <ArrowRight/> PLAY</div></div></div>
     </div>
   </section>
 
