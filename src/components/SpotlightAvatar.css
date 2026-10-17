@@ -1,17 +1,4 @@
-/*
- * SpotlightAvatar.css
- * Scoped exclusively to .sa-* selectors. Does not touch any hero styles.
- *
- * ⚠ CHECKERBOARD NOTE
- * Both avatar PNGs were confirmed as Format24bppRgb (no alpha channel).
- * Their "transparent" background areas contain baked-in checkerboard pixels:
- *   white squares ≈ rgb(254, 254, 254)
- *   grey  squares ≈ rgb(215, 215, 215) — visibly lighter than the white hero bg
- * CSS cannot remove baked pixels. background:#fff on .sa-container masks the
- * near-white squares but the grey squares (~215) will remain faintly visible.
- * FIX REQUIRED: re-export both PNGs as 32-bit RGBA (PNG with transparency)
- * from Figma / Photoshop. Once the files have proper alpha, remove background:#fff.
- */
+/* SpotlightAvatar styles are scoped to .sa-* selectors. */
 
 /* -------------------------------------------------------------------------
    Container — fills hero-avatar-wrapper which already provides

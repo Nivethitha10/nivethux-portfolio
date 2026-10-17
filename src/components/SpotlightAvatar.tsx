@@ -197,7 +197,7 @@ export const SpotlightAvatar: React.FC = () => {
     >
       {/* Layer 1 (z-index: 1) — always visible underneath */}
       <img
-        src="/images/avatar-normal.png"
+        src="/images/avatar-normal-clean.png"
         alt=""
         aria-hidden="true"
         className="sa-img sa-normal"
@@ -207,7 +207,7 @@ export const SpotlightAvatar: React.FC = () => {
       {/* Layer 2 (z-index: 2) — on top, hidden by mask, revealed in spotlight */}
       <img
         ref={spiderRef}
-        src="/images/avatar-spidergirl.png"
+        src="/images/avatar-spidergirl-clean.png"
         alt=""
         aria-hidden="true"
         className="sa-img sa-spider"
