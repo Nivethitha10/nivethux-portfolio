@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { SpotlightAvatar } from './SpotlightAvatar';
 import './Hero.css';
 
 export const Hero: React.FC = () => {
@@ -26,15 +27,10 @@ export const Hero: React.FC = () => {
             </a>
           </div>
 
-          {/* Right Column: 3D Character Avatar — transparent PNG, no background box */}
+          {/* Right Column: interactive spotlight avatar */}
           <div className="hero-visual">
             <div className="hero-avatar-wrapper">
-              {/* Main avatar: transparent PNG renders against page background */}
-              <img
-                src="/assets/figma-avatar.png"
-                alt="3D illustrated character of Nivethitha — striped top, smiling"
-                className="hero-avatar-img"
-              />
+              <SpotlightAvatar />
             </div>
           </div>
         </div>

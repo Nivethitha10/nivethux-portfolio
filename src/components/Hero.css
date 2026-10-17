@@ -13,7 +13,7 @@
   grid-template-columns: minmax(0, 592px) minmax(0, 480px);
   align-items: end;
   gap: 48px;
-  height: 746px;
+  min-height: 580px;
   padding-top: 64px;
 }
 
@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-bottom: 137px;
+  padding-bottom: 56px;
 }
 
 .hero-eyebrow {
@@ -93,15 +93,12 @@
   justify-content: center;
   align-items: flex-end;
   width: 100%;
-  height: 708px;
 }
 
 .hero-avatar-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 480 / 708;
-  overflow: hidden;
-  border-radius: 24px;
+  aspect-ratio: 1655 / 950;
   background: transparent;
 }
 
@@ -148,7 +145,7 @@
   }
 
   .hero-visual {
-    height: min(610px, 72vw);
+    height: auto;
   }
 
   .hero-title {

@@ -1,0 +1,94 @@
+/*
+ * SpotlightAvatar.css
+ * Scoped exclusively to .sa-* selectors. Does not touch any hero styles.
+ *
+ * ⚠ CHECKERBOARD NOTE
+ * Both avatar PNGs were confirmed as Format24bppRgb (no alpha channel).
+ * Their "transparent" background areas contain baked-in checkerboard pixels:
+ *   white squares ≈ rgb(254, 254, 254)
+ *   grey  squares ≈ rgb(215, 215, 215) — visibly lighter than the white hero bg
+ * CSS cannot remove baked pixels. background:#fff on .sa-container masks the
+ * near-white squares but the grey squares (~215) will remain faintly visible.
+ * FIX REQUIRED: re-export both PNGs as 32-bit RGBA (PNG with transparency)
+ * from Figma / Photoshop. Once the files have proper alpha, remove background:#fff.
+ */
+
+/* -------------------------------------------------------------------------
+   Container — fills hero-avatar-wrapper which already provides
+   position:relative, aspect-ratio:480/708, overflow:hidden, border-radius:24px.
+   We add only what the container itself needs.
+   ------------------------------------------------------------------------- */
+.sa-container {
+  position: absolute;
+  inset: 0;
+  outline: none;
+  cursor: crosshair;
+  background: transparent;
+  pointer-events: auto;
+}
+
+.sa-container:focus-visible {
+  outline: 2px solid #0d9488;
+  outline-offset: 3px;
+  border-radius: 24px;
+}
+
+/* -------------------------------------------------------------------------
+   Shared image rules.
+   Images are 1655×950 px landscape displayed in a portrait container.
+   object-fit:contain keeps both images at identical scale without cropping.
+   object-position:center 20% seats the subjects in the upper-centre of the frame.
+   Both layers have pointer-events:none so mouse events reach the container div.
+   ------------------------------------------------------------------------- */
+.sa-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  display: block;
+  background: transparent;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+/* -------------------------------------------------------------------------
+   Layer 1 (BOTTOM): normal portrait — always visible beneath the spider layer.
+   ------------------------------------------------------------------------- */
+.sa-normal {
+  z-index: 1;
+}
+
+/* -------------------------------------------------------------------------
+   Layer 2 (TOP): Spider-Girl — sits above normal, hidden by default via a
+   zero-radius CSS mask. The JS RAF loop updates mask-image each frame to
+   create and animate the soft circular spotlight.
+
+   WHY z-index:2 (top)?
+   The mask cuts a "hole" in the spider image. Where the mask is transparent,
+   you see the normal image below. Where the mask is black (opaque), you see
+   the spider image. With spider on top and normal below this is correct.
+   If spider were below (z:1) and normal above (z:2), the fully-opaque
+   normal layer would cover everything regardless of the spider's mask.
+   ------------------------------------------------------------------------- */
+.sa-spider {
+  z-index: 2;
+  /* Initially fully hidden — JS replaces this with the animated mask */
+  mask-image: radial-gradient(circle at 50% 50%, transparent 0%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, transparent 0%, transparent 100%);
+  will-change: mask-image, -webkit-mask-image;
+}
+
+/* -------------------------------------------------------------------------
+   prefers-reduced-motion: JS also checks this via matchMedia.
+   If motion is reduced, the JS loop never starts, so no mask animation fires.
+   This CSS rule is a safety belt.
+   ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .sa-spider {
+    /* Keep the hidden mask but disable any potential CSS transitions */
+    transition: none;
+  }
+}
