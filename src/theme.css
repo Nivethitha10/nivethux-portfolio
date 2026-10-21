@@ -258,6 +258,31 @@ html[data-theme='dark'] .portfolio-app .project1-page .project1-callout {
   border-color: #334155 !important;
 }
 
+html[data-theme='dark'] .portfolio-app .project1-page {
+  color: #cbd5e1;
+}
+
+html[data-theme='dark'] .portfolio-app .project1-page :is(h1, h2, h3, h4, strong) {
+  color: #f8fafc !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project1-page :is(p, span) {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project1-page .project1-snapshot span,
+html[data-theme='dark'] .portfolio-app .project1-page .project1-case-nav > span {
+  color: #94a3b8 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project1-page :is(.project1-pill, .project1-view-label) {
+  color: #2dd4bf !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project1-page .project1-cta a {
+  color: #0f172a !important;
+}
+
 html[data-theme='dark'] .portfolio-app .project2-page {
   --warehouse-line: #334155;
   --warehouse-ink: #f8fafc;
