@@ -159,6 +159,28 @@
   .golf-reflection .golf-wrap { grid-template-columns: 1fr; gap: 32px; }
 }
 
+@media (min-width: 701px) and (max-width: 820px) {
+  .golf-promise-row { align-items: flex-start; flex-direction: column; }
+  .golf-service-promise { min-width: 0; }
+  .golf-labeled-row, .golf-findings-heading, .golf-scope-note, .golf-test-plan {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .golf-findings-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .golf-principles-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .golf-principles .golf-findings-heading { display: flex; align-items: flex-start; flex-direction: column; }
+  .golf-chapter, .golf-chapter:first-of-type { min-height: 0; padding-block: 64px; }
+  .golf-chapter-stage, .golf-chapter--reverse .golf-chapter-stage {
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 32px;
+    min-height: 0;
+    margin-top: 36px;
+  }
+  .golf-chapter--reverse .golf-chapter-stage { grid-template-columns: 280px minmax(0, 1fr); }
+  .golf-device-story, .golf-phone { width: 280px; }
+  .golf-phone { height: auto; }
+}
+
 @media (max-width: 700px) {
   .golf-wrap, .golf-hero-inner { width: calc(100% - 40px); }
   .golf-hero-inner { padding: 20px 0 54px; }

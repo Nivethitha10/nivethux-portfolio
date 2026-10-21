@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #fff;
+  background-color: var(--bg-card);
   border-bottom: 1px solid #f1f5f9;
 }
 
@@ -41,6 +41,37 @@
   font-weight: 600;
 }
 
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  color: var(--text-heading);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--primary);
+  border-color: var(--primary-border);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
 
 /* Download Resume Button */
 .btn-resume {
@@ -129,7 +160,7 @@
     top: 68px;
     left: 0;
     right: 0;
-    background-color: #ffffff;
+    background-color: var(--bg-card);
     border-bottom: 1px solid var(--border-light);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     padding: 1.5rem;
@@ -168,13 +199,21 @@
 
   .mobile-actions {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     gap: 0.75rem;
+  }
+
+  .mobile-actions .theme-toggle {
+    width: 42px;
+    height: 42px;
+    padding: 0;
   }
 
   .mobile-actions .btn-resume {
     justify-content: center;
-    width: 100%;
+    flex: 1;
+    width: auto;
     padding: 0.75rem;
   }
 }

@@ -1,0 +1,453 @@
+/* Shared dark theme overrides. Page-specific layout and imagery remain unchanged. */
+.logo-image-dark { display: none !important; }
+
+html[data-theme='dark'],
+html[data-theme='dark'] body,
+html[data-theme='dark'] #root,
+html[data-theme='dark'] .portfolio-app {
+  background-color: #0f172a;
+  color: #cbd5e1;
+}
+
+html[data-theme='dark'] .portfolio-app :is(
+  .navbar, .mobile-menu, .footer, main,
+  .hero-section, .selected-work-section, .philosophy-section, .process-section, .about-section, .cta-section,
+  .about-page, .about-page-hero, .about-page-values, .about-page-journey, .about-page-education, .about-page-cta,
+  .work-page, .work-introduction, .work-index,
+  .contact-page, .contact-intro, .contact-details, .contact-sent-page, .contact-sent-intro, .contact-sent-details,
+  .not-found-page, .not-found-content,
+  .project1-page, .project1-page section, .project2-page, .project2-page section,
+  .project3-page, .project3-page section, .golf-project, .golf-project section,
+  .site-assets-page, .site-assets-page section
+) {
+  background-color: #0f172a !important;
+  color: #cbd5e1;
+}
+
+html[data-theme='dark'] .portfolio-app :is(
+  .selected-work-section, .process-section, .about-page-values, .about-page-education,
+  .contact-sent-details, .project1-page .project1-outcome,
+  .project2-page .warehouse-principles, .project3-page .p3-principles,
+  .golf-project .golf-principles, .golf-project .golf-outcome
+) {
+  background-color: #1e293b !important;
+}
+
+html[data-theme='dark'] .portfolio-app :is(
+  [class*='card'], [class*='panel'], [class*='tile'],
+  .warehouse-pattern, .p3-edge-grid article, .p3-overview-grid article
+) {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  box-shadow: var(--shadow-card);
+}
+
+html[data-theme='dark'] .portfolio-app .about-role {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-color: #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app :is(input, textarea, select) {
+  color: #f8fafc !important;
+  background-color: #1e293b !important;
+  border-color: #475569 !important;
+}
+
+html[data-theme='dark'] .portfolio-app :is(input, textarea, select)::placeholder {
+  color: #94a3b8 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .contact-details {
+  background-color: transparent !important;
+}
+
+html[data-theme='dark'] .portfolio-app :is(.contact-field, .contact-enquiry-types legend) {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .contact-enquiry-option {
+  color: #cbd5e1 !important;
+  background-color: transparent !important;
+  border-color: #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .contact-enquiry-option:hover,
+html[data-theme='dark'] .portfolio-app .contact-enquiry-option.selected {
+  color: #2dd4bf !important;
+  background-color: #134e4a !important;
+  border-color: #0f766e !important;
+}
+
+html[data-theme='dark'] .portfolio-app .contact-direct-rule {
+  background-color: #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app :is(h1, h2, h3, h4, h5, h6, .section-title, [class*='title'], .footer-col-header, .footer-role) {
+  color: #f8fafc !important;
+}
+
+html[data-theme='dark'] .portfolio-app :is(p, li, small, label, figcaption, blockquote, [class*='description'], [class*='subtitle'], [class*='caption'], [class*='meta'], [class*='body']) {
+  color: #94a3b8;
+}
+
+html[data-theme='dark'] .portfolio-app :is(a, .nav-link, .mobile-nav-link, .footer-link, button) {
+  color: #cbd5e1;
+}
+
+html[data-theme='dark'] .portfolio-app :is(
+  .eyebrow, [class*='eyebrow'], [class*='kicker'], [class*='tag'], [class*='badge'],
+  .nav-link:hover, .mobile-nav-link:hover, .footer-link:hover
+) {
+  color: #2dd4bf !important;
+}
+
+html[data-theme='dark'] .portfolio-app :is(.btn-resume, [class*='primary-button'], [class*='submit-button']) {
+  background-color: #14b8a6 !important;
+  color: #0f172a !important;
+}
+
+html[data-theme='dark'] .portfolio-app .theme-toggle {
+  background-color: #1e293b;
+  color: #f8fafc !important;
+  border-color: #334155;
+}
+
+html[data-theme='dark'] .portfolio-app .mobile-menu,
+html[data-theme='dark'] .portfolio-app .navbar {
+  border-color: #1e293b;
+}
+
+html[data-theme='dark'] .portfolio-app .footer-watermark-text {
+  color: #1e293b !important;
+}
+
+html[data-theme='dark'] .portfolio-app .logo-image-light {
+  display: none !important;
+}
+
+html[data-theme='dark'] .portfolio-app .logo-image-dark {
+  display: block !important;
+}
+
+html[data-theme='dark'] .portfolio-app :is(.hero-cta, .btn-explore-all) {
+  color: #f8fafc !important;
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .philosophy-tag {
+  color: #cbd5e1 !important;
+  background-color: transparent !important;
+  border-color: #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .philosophy-icon-badge {
+  color: #2dd4bf !important;
+  background-color: #334155 !important;
+  border-radius: 12px;
+}
+
+html[data-theme='dark'] .portfolio-app .philosophy-card :is(h3, p) {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+html[data-theme='dark'] .portfolio-app .btn-cta-main {
+  color: #0f172a !important;
+  background-color: #14b8a6 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .cta-section {
+  border-color: #0f172a !important;
+}
+
+html[data-theme='dark'] .portfolio-app .about-page > section {
+  border-color: transparent !important;
+}
+
+html[data-theme='dark'] .portfolio-app .about-page-photo {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html[data-theme='dark'] .portfolio-app .about-value-card,
+html[data-theme='dark'] .portfolio-app .about-value-card:hover {
+  box-shadow: none !important;
+}
+
+html[data-theme='dark'] .portfolio-app .about-page-photo img {
+  transform: scale(1.24);
+  clip-path: none;
+}
+
+html[data-theme='dark'] .portfolio-app .about-page-photo:hover img {
+  transform: scale(1.28);
+}
+
+html[data-theme='dark'] .portfolio-app .work-case-link {
+  color: #2dd4bf !important;
+}
+
+html[data-theme='dark'] .portfolio-app .work-entry {
+  border-top: 1px solid #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .work-index {
+  background-color: #0f172a !important;
+}
+
+/* Enterprise banking case study dark surfaces and separators. */
+html[data-theme='dark'] .portfolio-app .project1-page .project1-nda {
+  color: #cbd5e1;
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project1-page .project1-nda p {
+  color: #94a3b8 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project1-page .project1-snapshot {
+  background-color: #0f172a !important;
+  border-block-color: #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project1-page .project1-snapshot > div + div::before {
+  background-color: #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project1-page .project1-tags span {
+  color: #cbd5e1 !important;
+  background-color: #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project1-page .project1-section,
+html[data-theme='dark'] .portfolio-app .project1-page .project1-outputs {
+  border-color: #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project1-page .project1-card {
+  color: #cbd5e1;
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  box-shadow: none !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project1-page .project1-number {
+  color: #2dd4bf !important;
+  background-color: #1e293b !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project1-page .project1-number > span {
+  color: #2dd4bf !important;
+  background-color: #134e4a !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project1-page :is(.project1-row, .project1-role) {
+  border-bottom: 1px solid #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project1-page .project1-showcase-item {
+  border-bottom: 1px solid #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project1-page .project1-callout {
+  color: #cbd5e1 !important;
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project2-page {
+  --warehouse-line: #334155;
+  --warehouse-ink: #f8fafc;
+  --warehouse-body: #cbd5e1;
+  --warehouse-muted: #94a3b8;
+  --warehouse-teal: #2dd4bf;
+}
+
+html[data-theme='dark'] .portfolio-app .project2-page :is(
+  .warehouse-meta > div, .warehouse-persona, .warehouse-flow-map,
+  .warehouse-problem article, .warehouse-decision-card,
+  .warehouse-highlight, .warehouse-other-grid article,
+  .warehouse-reflection-grid article
+) {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  box-shadow: none !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project2-page .warehouse-highlight {
+  color: #cbd5e1;
+}
+
+html[data-theme='dark'] .portfolio-app .project2-page .warehouse-highlight__icon {
+  color: #2dd4bf !important;
+  background-color: #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project2-page .warehouse-persona__icon {
+  color: #2dd4bf !important;
+  background-color: #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project2-page .warehouse-screen-card {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Strip Test case study dark palette and remaining light surfaces. */
+html[data-theme='dark'] .portfolio-app .project3-page {
+  --p3-ink: #f8fafc;
+  --p3-copy: #cbd5e1;
+  --p3-secondary: #94a3b8;
+  --p3-border: #334155;
+  --p3-teal: #2dd4bf;
+  color: #cbd5e1;
+}
+
+html[data-theme='dark'] .portfolio-app .project3-page .p3-tags span {
+  color: #2dd4bf !important;
+  background-color: #134e4a !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project3-page .p3-chapter {
+  background-color: #1e293b !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project3-page .p3-chapter:nth-child(even) {
+  background-color: #0f172a !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project3-page :is(.p3-chapter-insight, .p3-decision-insight) {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project3-page :is(.p3-palette, .p3-type-sample) {
+  color: #cbd5e1;
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  box-shadow: none !important;
+}
+
+html[data-theme='dark'] .portfolio-app .project3-page .p3-edge-grid article > span {
+  color: #f8fafc !important;
+  background-color: #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .hero-cta-arrow {
+  color: #f8fafc !important;
+  background-color: #334155 !important;
+  border-color: #475569 !important;
+}
+
+html[data-theme='dark'] .portfolio-app :is(.contact-submit, .message-sent-action, .not-found-primary, .about-page-cta a) {
+  color: #0f172a !important;
+  background-color: #14b8a6 !important;
+  border-color: #14b8a6 !important;
+}
+
+html[data-theme='dark'] .portfolio-app :is(hr, [class*='divider'], [class*='separator']) {
+  border-color: #334155 !important;
+}
+
+/* Golf case study: replace its warm light-theme surfaces with the site dark palette. */
+html[data-theme='dark'] .portfolio-app .golf-project {
+  --golf-ink: #f8fafc;
+  --golf-body: #cbd5e1;
+  --golf-muted: #94a3b8;
+  --golf-line: #334155;
+  --golf-sage: #2dd4bf;
+  --golf-cream: #1e293b;
+  color: #cbd5e1 !important;
+  background-color: #0f172a !important;
+}
+
+html[data-theme='dark'] .portfolio-app .golf-project :is(
+  .golf-principles, .golf-outcome, .golf-reflection, .golf-chapter
+) {
+  background-color: #0f172a !important;
+}
+
+html[data-theme='dark'] .portfolio-app .golf-project :is(
+  .golf-section-tag, .golf-reflection-tag,
+  .golf-audience-pills span, .golf-process-steps article,
+  .golf-visual-samples article, .golf-findings-grid article,
+  .golf-principles-grid article, .golf-measures article
+) {
+  color: #cbd5e1 !important;
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  box-shadow: none !important;
+}
+
+html[data-theme='dark'] .portfolio-app .golf-project :is(.golf-callout, .golf-trust-note) {
+  color: #cbd5e1 !important;
+  background-color: #134e4a !important;
+  border-color: #115e59 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .golf-project :is(.golf-callout i, .golf-trust-note i) {
+  background-color: #2dd4bf !important;
+}
+
+html[data-theme='dark'] .portfolio-app .golf-project .golf-participants {
+  color: #cbd5e1 !important;
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .golf-project :is(
+  .golf-category, .golf-service-promise > div,
+  .golf-process-steps small, .golf-findings-grid small,
+  .golf-principles-grid > article > span, .golf-participants span,
+  .golf-measures small
+) {
+  color: #2dd4bf !important;
+}
+
+html[data-theme='dark'] .portfolio-app .golf-project :is(
+  .golf-section-tag, .golf-reflection-tag
+) {
+  color: #2dd4bf !important;
+}
+
+html[data-theme='dark'] .portfolio-app .golf-project :is(
+  .golf-promise-row > p, .golf-process-steps strong,
+  .golf-scope-note b, .golf-visual-samples article > b,
+  .golf-callout b, .golf-findings-grid h3, .golf-principles-grid h3,
+  .golf-chapter-header h2, .golf-chapter-notes h3,
+  .golf-trust-note span, .golf-participants strong,
+  .golf-measures h3, .golf-reflection blockquote,
+  .golf-reflection-marker > span:last-child, .golf-project-close h2
+) {
+  color: #f8fafc !important;
+  text-shadow: none !important;
+}
+
+html[data-theme='dark'] .portfolio-app .golf-project :is(
+  .golf-reflection-tag svg, .golf-service-promise svg
+) {
+  color: #94a3b8 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .golf-project .golf-legal {
+  color: #94a3b8 !important;
+  border-color: #334155 !important;
+}
+
+html[data-theme='dark'] .portfolio-app .golf-project .golf-project-footer nav a:hover {
+  color: #2dd4bf !important;
+}
+
+html[data-theme='dark'] .portfolio-app .footer-social-icon {
+  filter: invert(1);
+  mix-blend-mode: screen;
+  opacity: .88;
+}
+
+@media (max-width: 820px) {
+  .mobile-actions .theme-toggle span { display: none; }
+}

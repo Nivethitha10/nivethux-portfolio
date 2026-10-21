@@ -36,7 +36,23 @@ function setMeta(selector: string, attribute: 'name' | 'property', key: string, 
 
 export function App({ initialPath }: { initialPath: string }) {
   const [pathname, setPathname] = useState(() => normalizeRoutePath(initialPath));
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    try {
+      return window.localStorage.getItem('nivethux-theme') === 'dark' ? 'dark' : 'light';
+    } catch {
+      return 'light';
+    }
+  });
   const metadata = getPageMetadata(pathname);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    try {
+      window.localStorage.setItem('nivethux-theme', theme);
+    } catch {
+      // The theme still works for this session when storage is unavailable.
+    }
+  }, [theme]);
 
   useIsomorphicLayoutEffect(() => {
     document.title = metadata.title;
@@ -130,7 +146,7 @@ export function App({ initialPath }: { initialPath: string }) {
 
   return (
     <div className="portfolio-app">
-      <Navbar pathname={pathname} />
+      <Navbar pathname={pathname} theme={theme} onToggleTheme={() => setTheme((current) => current === 'light' ? 'dark' : 'light')} />
       {page}
       <Footer />
     </div>

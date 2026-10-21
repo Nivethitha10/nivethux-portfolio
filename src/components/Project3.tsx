@@ -1,6 +1,5 @@
 import React from 'react';
-import { Check, ChevronRight, MapPin, Signal, WifiOff } from 'lucide-react';
-import { routes } from '../routes';
+import { Check, MapPin, Signal, WifiOff } from 'lucide-react';
 import './Project3.css';
 
 const screen = (n: number) => `/assets/strip-test/screen-${String(n).padStart(2, '0')}.png`;
@@ -82,5 +81,4 @@ export const Project3: React.FC = () => <main className="project3-page" id="proj
 
   <section className="p3-overview"><div className="p3-wrap"><div className="p3-overview-heading"><div><span className="p3-label">Screen overview</span><h2>Depth lives in the transitions, not only the happy path.</h2></div><p>A secondary map of the Section 1 screen set, recreated with identifying content removed.</p></div><div className="p3-overview-grid">{overviewScreens.map((title,index)=><article key={title}><header><span>{String(index+1).padStart(2,'0')}</span><b>{title}</b></header><div className="p3-mini-screen"><img src={screen(index < 8 ? index + 1 : index === 8 ? 5 : 6)} alt=""/><div className="p3-mini-overlay"><i/><i/><i/></div></div></article>)}</div></div></section>
 
-  <section className="p3-project-nav"><div className="p3-wrap"><div className="p3-closing"><span className="p3-label">End of case study</span><h2>Designing for the field means treating uncertainty as a product state.</h2></div><div className="p3-project-cards"><a href={routes.work}><span>Previous · Farm profile</span><h3>Identity and operational context across a growing network.</h3><ChevronRight/></a><a className="p3-project-current" href="#project3-top"><span>Current · Strip Test</span><h3>A trusted field record from plot to report.</h3><ChevronRight/></a><a href={routes.work}><span>Next · Yield planning</span><h3>Decision support for the season ahead.</h3><ChevronRight/></a></div><div className="p3-page-index">Product design portfolio · Selected work <span>01 — 02 — 03</span></div></div></section>
 </main>;

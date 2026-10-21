@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
-import { Download } from 'lucide-react';
+import { Download, Moon, Sun } from 'lucide-react';
 import { Logo } from './Logo';
 import resumeUrl from '../../Resume/Nivethitha_Resume_5yrsExp.pdf';
 import { routes } from '../routes';
 import './Navbar.css';
 
-export const Navbar: React.FC<{ pathname: string }> = ({ pathname }) => {
+type NavbarProps = { pathname: string; theme: 'light' | 'dark'; onToggleTheme: () => void };
+
+export const Navbar: React.FC<NavbarProps> = ({ pathname, theme, onToggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
   const isHomePage = pathname === routes.home;
   const isAboutPage = pathname === routes.about;
   const isWorkPage = pathname === routes.work;
   const isContactPage = pathname === routes.contact || pathname === routes.contactThankYou;
   const contactHref = isHomePage ? '#contact' : routes.contact;
+  const themeLabel = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -42,6 +45,9 @@ export const Navbar: React.FC<{ pathname: string }> = ({ pathname }) => {
 
         {/* CTA Button Desktop */}
         <div className="navbar-actions">
+          <button className="theme-toggle" type="button" onClick={onToggleTheme} aria-label={themeLabel} title={themeLabel} aria-pressed={theme === 'dark'}>
+            {theme === 'dark' ? <Sun size={18} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
+          </button>
           <a href={resumeUrl} download="Nivethitha_Resume_5yrsExp.pdf" className="btn-resume">
             <Download size={16} />
             <span>Download Resume</span>
@@ -78,6 +84,10 @@ export const Navbar: React.FC<{ pathname: string }> = ({ pathname }) => {
           </li>
         </ul>
         <div className="mobile-actions">
+          <button className="theme-toggle" type="button" onClick={onToggleTheme} aria-label={themeLabel} title={themeLabel} aria-pressed={theme === 'dark'}>
+            {theme === 'dark' ? <Sun size={18} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
+            <span>{theme === 'dark' ? 'Light mode' : 'Dark mode'}</span>
+          </button>
           <a href={resumeUrl} download="Nivethitha_Resume_5yrsExp.pdf" className="btn-resume" onClick={() => setIsOpen(false)}>
             <Download size={16} />
             <span>Download Resume</span>
