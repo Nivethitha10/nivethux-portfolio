@@ -9,8 +9,8 @@ export interface PageMetadata {
 
 const pageMetadata: Record<string, PageMetadata> = {
   [routes.home]: {
-    title: 'Product Designer Portfolio | Enterprise UX & Human–AI | NivethUX',
-    description: 'Nivethitha is a Product Designer shaping enterprise UX, operational workflows, and Human–AI experiences into clear, useful products for complex systems.',
+    title: 'Product Designer Portfolio | Enterprise UX & AI-Assisted Development | NivethUX',
+    description: 'Nivethitha is a Product Designer with 5 years of experience connecting people, systems, and technology through thoughtful enterprise UX and AI-assisted development.',
     canonicalPath: routes.home,
   },
   [routes.about]: {

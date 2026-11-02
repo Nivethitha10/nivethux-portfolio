@@ -1,4 +1,5 @@
 import React from 'react';
+import { Code2, Network, Workflow } from 'lucide-react';
 import './Philosophy.css';
 
 interface Principle {
@@ -12,24 +13,24 @@ interface Principle {
 const principles: Principle[] = [
   {
     id: 'workflows',
-    icon: <img src="/assets/icon-settings.svg" alt="" />,
-    title: 'Enterprise workflows',
-    text: 'Operational tools and data-heavy systems that help people know what matters and what to do next.',
-    tags: ['Role-based systems', 'Operational tools', 'Information architecture']
+    icon: <Workflow size={20} aria-hidden="true" />,
+    title: 'Enterprise product design',
+    text: 'Complex workflows, operational tools and data-heavy applications designed around real-world needs.',
+    tags: ['Role-based systems', 'Operational workflows', 'Information architecture']
   },
   {
     id: 'systems',
-    icon: <img src="/assets/icon-settings.svg" alt="" />,
+    icon: <Network size={20} aria-hidden="true" />,
     title: 'Systems thinking',
-    text: 'The structure behind the screens: how states, permissions, and validation fit together, and how patterns scale into design systems.',
-    tags: ['States', 'Permissions', 'Validation', 'Design systems']
+    text: 'Designing the logic behind the interface — how states, permissions, validation and patterns work together.',
+    tags: ['Interaction logic', 'Design systems', 'State management']
   },
   {
     id: 'ai',
-    icon: <img src="/assets/icon-settings.svg" alt="" />,
-    title: 'Human-AI interaction',
-    text: 'Intelligent features people can trust, question, and control.',
-    tags: ['Trust', 'Transparency', 'Human-in-the-loop']
+    icon: <Code2 size={20} aria-hidden="true" />,
+    title: 'AI-assisted design & development',
+    text: 'Turning design ideas into functional experiences through AI-assisted prototyping and implementation.',
+    tags: ['AI-assisted prototyping', 'Figma-to-code', 'Frontend implementation']
   }
 ];
 
@@ -41,7 +42,7 @@ export const Philosophy: React.FC = () => {
           <span className="eyebrow">WHAT I DESIGN</span>
           <h2 className="philosophy-title">I design for complexity.</h2>
           <p className="philosophy-subtitle">
-            Products where many roles, rules, and states meet, and the interface has to make sense of them.
+            Connecting people, systems and technology through thoughtful design.
           </p>
         </div>
 

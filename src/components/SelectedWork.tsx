@@ -15,22 +15,22 @@ interface Project {
 
 const projects: Project[] = [
   {
-    id: 'financial',
-    image: '/assets/project-banking.png',
-    tags: 'FINTECH · ENTERPRISE · COMPLEX DATA',
-    number: '01',
-    title: 'Enterprise Banking Platform',
-    description: 'Designing role-based financial workflows for complex monitoring and transaction operations. Turning dense data into clear, decision-ready experiences.',
-    link: routes.enterpriseBanking
-  },
-  {
     id: 'inventory',
     image: '/assets/project-warehouse.png',
     tags: 'MANUFACTURING · WAREHOUSE OPS · ZEBRA HANDHELD',
-    number: '02',
+    number: '01',
     title: 'Warehouse Operations & Material Movement',
     description: 'State-driven scanning workflows for line workers — moving, tracking, and dispatching material with zero room for error.',
     link: routes.warehouseOperations
+  },
+  {
+    id: 'financial',
+    image: '/assets/project-banking.png',
+    tags: 'FINTECH · ENTERPRISE · COMPLEX DATA',
+    number: '02',
+    title: 'Enterprise Banking Platform',
+    description: 'Designing role-based financial workflows for complex monitoring and transaction operations. Turning dense data into clear, decision-ready experiences.',
+    link: routes.enterpriseBanking
   },
   {
     id: 'strip-test',
