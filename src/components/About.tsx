@@ -9,7 +9,7 @@ export const About: React.FC = () => {
       <div className="container">
         <div className="about-header">
           <span className="eyebrow">MEET THE DESIGNER</span>
-          <h2 className="about-title">Hi, I'm Nive.</h2>
+          <h2 className="about-title">Nivethitha</h2>
         </div>
 
         <div className="about-layout">

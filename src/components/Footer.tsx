@@ -15,12 +15,7 @@ export const Footer: React.FC = () => {
           {/* Brand Column */}
           <div className="footer-brand">
             <Logo size="normal" />
-            <h3 className="footer-role">
-              Brand &amp; UI/UX Designer<br />based in Bangalore
-            </h3>
-            <p className="footer-bio">
-              Hi, I'm Nivethitha — a UI/UX and brand designer passionate about creating seamless digital experiences that connect and convert.
-            </p>
+            <h3 className="footer-role">Product Designer</h3>
           </div>
 
           {/* Navigation Column */}
