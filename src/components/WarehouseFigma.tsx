@@ -1055,7 +1055,7 @@ export function WarehouseFigma() {
                       className="[word-break:break-word] font-['Geist:SemiBold'] font-[650] leading-[16.5px] relative shrink-0 text-[#2563eb] text-[11px] tracking-[1.1px] whitespace-nowrap"
                       data-node-id="233:3729"
                     >
-                      Preapre
+                      Prepare
                     </p>
                     <div
                       className="content-stretch flex flex-col h-[32px] items-start pt-[8px] relative shrink-0 w-[346.664px]"
@@ -1858,7 +1858,7 @@ export function WarehouseFigma() {
                         className="[word-break:break-word] font-['Geist:SemiBold'] font-[650] leading-[18px] relative shrink-0 text-[#2563eb] text-[12px] tracking-[0.96px] uppercase whitespace-nowrap"
                         data-node-id="233:3864"
                       >
-                        05
+                        04
                       </p>
                       <div
                         className="content-stretch flex flex-col items-start relative shrink-0"
@@ -1969,7 +1969,7 @@ export function WarehouseFigma() {
                       className="relative text-[#0f172a]"
                       data-node-id="233:3885"
                     >
-                      Component Kanban Classic
+                      Kanban Classic
                     </p>
                   </div>
                 </div>
@@ -3222,7 +3222,7 @@ export function WarehouseFigma() {
                         className="[word-break:break-word] font-['Geist:SemiBold'] font-[650] leading-[16.5px] relative shrink-0 text-[#475569] text-[11px] tracking-[1.1px] uppercase whitespace-nowrap"
                         data-node-id="233:4104"
                       >
-                        Clear Vaidation States
+                        Clear Validation States
                       </p>
                     </div>
                     <div
@@ -3281,7 +3281,7 @@ export function WarehouseFigma() {
                         className="[word-break:break-word] font-['Geist:SemiBold'] font-semibold leading-[26px] relative shrink-0 text-[#0f172a] text-[19px] whitespace-nowrap"
                         data-node-id="233:4114"
                       >
-                        Making operational Errors Visible And Actionable
+                        Making operational errors visible and actionable
                       </p>
                     </div>
                     <div
@@ -3386,7 +3386,7 @@ export function WarehouseFigma() {
                     className="absolute font-semibold leading-[16px] left-[155.08px] text-[#475569] text-[12px] top-[2px] tracking-[1.5px]"
                     data-node-id="233:4131"
                   >
-                    The Other 5 Designed Workflows
+                    5 Other Designed Workflows
                   </p>
                 </div>
               </div>
