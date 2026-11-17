@@ -1384,15 +1384,15 @@ export function WarehouseFigma() {
                   data-name="Heading 2:margin"
                 >
                   <div
-                    className="[word-break:break-word] font-['Geist:SemiBold'] font-[650] h-[42px] leading-[42px] relative shrink-0 text-[32px] tracking-[-0.64px] w-full whitespace-nowrap"
+                    className="[word-break:break-word] content-stretch flex font-['Geist:SemiBold'] font-[650] gap-[14px] h-[42px] items-start leading-[42px] relative shrink-0 text-[32px] tracking-[-0.64px] w-full whitespace-nowrap"
                     data-node-id="233:3784"
                     data-name="Heading 2"
                   >
-                    <p className="absolute left-0 text-[#2563eb] top-0" data-node-id="233:3785">
+                    <p className="relative shrink-0 text-[#2563eb]" data-node-id="233:3785">
                       01
                     </p>
                     <p
-                      className="absolute left-[48.69px] text-[#0f172a] top-0"
+                      className="relative text-[#0f172a]"
                       data-node-id="233:3786"
                     >
                       Preserial Stock Creation
@@ -1958,15 +1958,15 @@ export function WarehouseFigma() {
                   data-name="Heading 2:margin"
                 >
                   <div
-                    className="[word-break:break-word] font-['Geist:SemiBold'] font-[650] h-[42px] leading-[42px] relative shrink-0 text-[32px] tracking-[-0.64px] w-full whitespace-nowrap"
+                    className="[word-break:break-word] content-stretch flex font-['Geist:SemiBold'] font-[650] gap-[14px] h-[42px] items-start leading-[42px] relative shrink-0 text-[32px] tracking-[-0.64px] w-full whitespace-nowrap"
                     data-node-id="233:3883"
                     data-name="Heading 2"
                   >
-                    <p className="absolute left-0 text-[#2563eb] top-0" data-node-id="233:3884">
+                    <p className="relative shrink-0 text-[#2563eb]" data-node-id="233:3884">
                       02
                     </p>
                     <p
-                      className="absolute left-[54.94px] text-[#0f172a] top-0"
+                      className="relative text-[#0f172a]"
                       data-node-id="233:3885"
                     >
                       Component Kanban Classic
@@ -2557,15 +2557,15 @@ export function WarehouseFigma() {
                   data-name="Heading 2:margin"
                 >
                   <div
-                    className="[word-break:break-word] font-['Geist:SemiBold'] font-[650] h-[42px] leading-[42px] relative shrink-0 text-[32px] tracking-[-0.64px] w-full whitespace-nowrap"
+                    className="[word-break:break-word] content-stretch flex font-['Geist:SemiBold'] font-[650] gap-[14px] h-[42px] items-start leading-[42px] relative shrink-0 text-[32px] tracking-[-0.64px] w-full whitespace-nowrap"
                     data-node-id="233:3986"
                     data-name="Heading 2"
                   >
-                    <p className="absolute left-0 text-[#2563eb] top-0" data-node-id="233:3987">
+                    <p className="relative shrink-0 text-[#2563eb]" data-node-id="233:3987">
                       03
                     </p>
                     <p
-                      className="absolute left-[55.8px] text-[#0f172a] top-0"
+                      className="relative text-[#0f172a]"
                       data-node-id="233:3988"
                     >
                       Close Truck Dispatch
@@ -3612,7 +3612,7 @@ export function WarehouseFigma() {
           <div
             className="bg-white content-stretch flex flex-col items-center overflow-clip relative shrink-0 w-[1512px]"
             data-node-id="233:4169"
-            data-name="06 — Extending the design system with variables and tokens"
+            data-name="Extending the design system with variables and tokens"
           >
             <div
               className="content-stretch flex flex-col gap-[36px] items-start overflow-clip pb-[80px] pt-[64px] relative shrink-0 w-[1120px]"
@@ -3634,11 +3634,8 @@ export function WarehouseFigma() {
                   data-node-id="233:4173"
                   data-name="Section heading"
                 >
-                  <p className="relative shrink-0 text-[#2563eb] w-[43px]" data-node-id="233:4174">
-                    06
-                  </p>
                   <p
-                    className="relative shrink-0 text-[#0f172a] w-[1063px]"
+                    className="relative shrink-0 text-[#0f172a] w-full"
                     data-node-id="233:4175"
                   >
                     Extending the design system with variables and tokens
@@ -3939,7 +3936,7 @@ export function WarehouseFigma() {
           <div
             className="bg-white content-stretch flex flex-col items-center overflow-clip relative shrink-0 w-[1512px]"
             data-node-id="233:4219"
-            data-name="07 — Collaboration and implementation"
+            data-name="Collaboration and implementation"
           >
             <div
               className="content-stretch flex flex-col gap-[36px] items-start overflow-clip pb-[80px] pt-[64px] relative shrink-0 w-[1120px]"
@@ -3961,9 +3958,6 @@ export function WarehouseFigma() {
                   data-node-id="233:4223"
                   data-name="Section heading"
                 >
-                  <p className="relative shrink-0 text-[#2563eb] w-[43px]" data-node-id="233:4224">
-                    07
-                  </p>
                   <p
                     className="flex-[1_0_0] min-w-px relative text-[#0f172a]"
                     data-node-id="233:4225"
@@ -4124,7 +4118,7 @@ export function WarehouseFigma() {
           <div
             className="bg-white content-stretch flex flex-col items-center overflow-clip relative shrink-0 w-[1512px]"
             data-node-id="233:4248"
-            data-name="08 — Outcome and reflection"
+            data-name="Outcome and reflection"
           >
             <div
               className="content-stretch flex flex-col gap-[36px] items-start overflow-clip pb-[80px] pt-[64px] relative shrink-0 w-[1120px]"
@@ -4146,9 +4140,6 @@ export function WarehouseFigma() {
                   data-node-id="233:4252"
                   data-name="Section heading"
                 >
-                  <p className="relative shrink-0 text-[#2563eb] w-[43px]" data-node-id="233:4253">
-                    08
-                  </p>
                   <p
                     className="flex-[1_0_0] min-w-px relative text-[#0f172a]"
                     data-node-id="233:4254"

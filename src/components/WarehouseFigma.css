@@ -36,8 +36,8 @@
   list-style: disc;
 }
 
-.case-study [data-name="Header"],
-.case-study [data-name="Footer"] {
+.case-study [data-node-id="233:3536"],
+.case-study [data-node-id="233:4293"] {
   display: none;
 }
 
