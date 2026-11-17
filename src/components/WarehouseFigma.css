@@ -157,6 +157,10 @@ html[data-theme="dark"] .portfolio-app .case-study [data-node-id="233:4347"] {
     width: 100%;
   }
 
+  .case-study [class*="w-[1512px]"] {
+    width: 100%;
+  }
+
   .case-study [class*="w-[1120px]"] {
     width: calc(100vw - 64px);
     max-width: 1120px;
