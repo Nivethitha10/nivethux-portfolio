@@ -9,7 +9,7 @@ import { CtaBanner } from './components/CtaBanner';
 import { Footer } from './components/Footer';
 import { AboutPage } from './components/AboutPage';
 import { Project1 } from './components/Project1';
-import { Project2 } from './components/Project2';
+import { WarehouseFigma } from './components/WarehouseFigma';
 import { Project3 } from './components/Project3';
 import { GolfProject } from './components/GolfProject';
 import { WorkPage } from './components/WorkPage';
@@ -36,23 +36,36 @@ function setMeta(selector: string, attribute: 'name' | 'property', key: string, 
 
 export function App({ initialPath }: { initialPath: string }) {
   const [pathname, setPathname] = useState(() => normalizeRoutePath(initialPath));
-  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [themeReady, setThemeReady] = useState(false);
+
+  useEffect(() => {
     try {
-      return window.localStorage.getItem('nivethux-theme') === 'dark' ? 'dark' : 'light';
+      const savedTheme = window.localStorage.getItem('nivethux-theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        setTheme(savedTheme);
+      } else {
+        const initialTheme = document.documentElement.dataset.theme;
+        setTheme(initialTheme === 'dark' || initialTheme === 'light'
+          ? initialTheme
+          : window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      }
     } catch {
-      return 'light';
+      setTheme(window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     }
-  });
+    setThemeReady(true);
+  }, []);
   const metadata = getPageMetadata(pathname);
 
   useEffect(() => {
+    if (!themeReady) return;
     document.documentElement.dataset.theme = theme;
     try {
       window.localStorage.setItem('nivethux-theme', theme);
     } catch {
       // The theme still works for this session when storage is unavailable.
     }
-  }, [theme]);
+  }, [theme, themeReady]);
 
   useIsomorphicLayoutEffect(() => {
     document.title = metadata.title;
@@ -129,7 +142,7 @@ export function App({ initialPath }: { initialPath: string }) {
     : pathname === routes.contact ? <ContactPage />
     : pathname === routes.contactThankYou ? <ContactSentPage />
     : pathname === routes.enterpriseBanking ? <Project1 />
-    : pathname === routes.warehouseOperations ? <Project2 />
+    : pathname === routes.warehouseOperations ? <WarehouseFigma />
     : pathname === routes.agtechStripTest ? <Project3 />
     : pathname === routes.golfApp ? <GolfProject />
     : pathname === routes.siteAssets ? <SiteAssetsPage />

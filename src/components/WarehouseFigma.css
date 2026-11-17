@@ -1,0 +1,287 @@
+.case-study {
+  --warehouse-page: #f8fafc;
+  --warehouse-page-secondary: #f1f5f9;
+  --warehouse-surface: #fff;
+  --warehouse-surface-subtle: #f8fafc;
+  --warehouse-text-primary: #0f172a;
+  --warehouse-text-secondary: #475569;
+  --warehouse-text-tertiary: #64748b;
+  --warehouse-link: #2563eb;
+  --warehouse-border: #e2e8f0;
+  --warehouse-border-strong: #cbd5e1;
+  --warehouse-focus: #3b82f6;
+  --warehouse-success: #16a34a;
+  --warehouse-warning: #d97706;
+  --warehouse-error: #dc2626;
+  --warehouse-info: #0891b2;
+  min-height: 0;
+  overflow-x: clip;
+  background: var(--warehouse-page);
+  color: var(--warehouse-text-primary);
+  font-family: var(--font-sans);
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.case-study [class*="font-['Geist:"] {
+  font-family: var(--font-sans) !important;
+}
+
+/* The export uses list-item tags for some numbered section labels and headings.
+   Keep those marker-free while preserving the explicit scanner feedback list. */
+.case-study li {
+  list-style: none;
+}
+
+.case-study ul li {
+  list-style: disc;
+}
+
+.case-study [data-name="Header"],
+.case-study [data-name="Footer"] {
+  display: none;
+}
+
+.case-study :is(a, button, [role="button"]) {
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease,
+    box-shadow 160ms ease, transform 160ms ease;
+}
+
+.case-study :is(a, button, [role="button"]):focus-visible {
+  outline: 2px solid var(--warehouse-focus);
+  outline-offset: 3px;
+}
+
+.case-study
+  img[src$=".png"]:not([src$="31352.png"]):not([src$="244fe.png"]):not([src$="13e56.png"]):not(
+    [src$="fffc8.png"]
+  ):not([src$="fd15c.png"]) {
+  cursor: zoom-in;
+}
+
+.image-preview {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  height: 100%;
+  padding: 32px;
+  border: 0;
+  background: rgb(2 6 23 / 92%);
+  color: white;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+.image-preview img {
+  width: auto;
+  max-width: min(1100px, 94vw);
+  height: auto;
+  max-height: 86dvh;
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 28px 80px rgb(0 0 0 / 45%);
+  cursor: zoom-out;
+}
+
+html[data-theme="dark"] .portfolio-app .case-study {
+  --warehouse-page: #020617;
+  --warehouse-page-secondary: #0f172a;
+  --warehouse-surface: #1e293b;
+  --warehouse-surface-subtle: #0f172a;
+  --warehouse-text-primary: #f8fafc;
+  --warehouse-text-secondary: #cbd5e1;
+  --warehouse-text-tertiary: #94a3b8;
+  --warehouse-link: #60a5fa;
+  --warehouse-border: #334155;
+  --warehouse-border-strong: #475569;
+  --warehouse-focus: #60a5fa;
+  --warehouse-success: #4ade80;
+  --warehouse-warning: #fbbf24;
+  --warehouse-error: #f87171;
+  --warehouse-info: #22d3ee;
+  background-color: var(--warehouse-page) !important;
+}
+
+html[data-theme="dark"] .portfolio-app .case-study [class*="bg-[#f8fafc]"],
+html[data-theme="dark"] .portfolio-app .case-study [class*="bg-[#f8fafb]"] {
+  background-color: var(--warehouse-page) !important;
+}
+
+html[data-theme="dark"] .portfolio-app .case-study [class*="bg-[#f1f5f9]"] {
+  background-color: var(--warehouse-page-secondary) !important;
+}
+
+html[data-theme="dark"] .portfolio-app .case-study [class*="bg-[#eff6ff]"] {
+  background-color: #172554 !important;
+}
+
+html[data-theme="dark"] .portfolio-app .case-study [class*="bg-white"] {
+  background-color: var(--warehouse-surface) !important;
+}
+
+html[data-theme="dark"] .portfolio-app .case-study [class*="text-[#0f172a]"],
+html[data-theme="dark"] .portfolio-app .case-study [class*="text-[#1e293b]"],
+html[data-theme="dark"] .portfolio-app .case-study [class*="text-[#334155]"] {
+  color: var(--warehouse-text-primary) !important;
+}
+
+html[data-theme="dark"] .portfolio-app .case-study [class*="text-[#475569]"] {
+  color: var(--warehouse-text-secondary) !important;
+}
+
+html[data-theme="dark"] .portfolio-app .case-study [class*="text-[#64748b]"] {
+  color: var(--warehouse-text-tertiary) !important;
+}
+
+html[data-theme="dark"] .portfolio-app .case-study [class*="text-[#2563eb]"] {
+  color: var(--warehouse-link) !important;
+}
+
+html[data-theme="dark"] .portfolio-app .case-study [class*="border-[#e2e8f0]"],
+html[data-theme="dark"] .portfolio-app .case-study [class*="border-[#f1f5f9]"] {
+  border-color: var(--warehouse-border) !important;
+}
+
+html[data-theme="dark"] .portfolio-app .case-study [data-node-id="233:4347"] {
+  color: #1e293b !important;
+}
+
+@media (max-width: 1279px) {
+  .case-study [class*="w-[1280px]"] {
+    width: 100%;
+  }
+
+  .case-study [class*="w-[1120px]"] {
+    width: calc(100vw - 64px);
+    max-width: 1120px;
+  }
+
+  .case-study [data-node-id="233:3538"],
+  .case-study [data-node-id="233:4295"] {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  .case-study [class*="w-[603px]"] {
+    width: min(603px, 100%);
+  }
+}
+
+@media (max-width: 760px) {
+  .case-study [class*="w-[1120px]"] {
+    width: calc(100vw - 40px);
+  }
+
+  .case-study [data-node-id="233:3563"] {
+    padding-top: 32px;
+  }
+
+  .case-study [data-node-id="233:3564"] {
+    height: auto;
+    padding-top: 28px;
+  }
+
+  .case-study [data-node-id="233:3565"] {
+    max-width: 100%;
+    font-size: 38px;
+    line-height: 1.06;
+    letter-spacing: -1.2px;
+    white-space: normal;
+  }
+
+  .case-study [data-node-id="233:3567"] {
+    width: 100%;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .case-study [data-node-id="233:3569"] {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .case-study [data-node-id="233:3569"] > div {
+    grid-column: auto;
+    grid-row: auto;
+    height: auto;
+    min-height: 76px;
+  }
+
+  .case-study [data-node-id="233:3596"] {
+    min-height: 660px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 660px;
+  }
+
+  .case-study [data-node-id="233:3597"] {
+    transform: scale(0.86);
+  }
+
+  .case-study [data-node-id="233:3607"] {
+    padding-top: 40px;
+  }
+
+  .case-study [class*="grid-cols-[repeat(3"],
+  .case-study [class*="grid-cols-[repeat(2"] {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study [class*="w-[552px]"],
+  .case-study [class*="w-[544px]"],
+  .case-study [class*="w-[603px]"] {
+    width: 100%;
+  }
+
+  .case-study [data-name="Core Flow Progression"],
+  .case-study [data-name="Delivery outcome cards"] {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .case-study [data-node-id="233:4296"] {
+    flex-wrap: wrap;
+    gap: 36px;
+  }
+
+  .case-study [data-node-id="233:4303"] {
+    width: min(100%, 360px);
+    white-space: normal;
+  }
+
+  .case-study [data-node-id="233:4345"] {
+    height: 110px;
+  }
+
+  .case-study [data-node-id="233:4347"] {
+    font-size: 100px;
+    line-height: 110px;
+    letter-spacing: -5px;
+  }
+
+  .case-study [data-node-id="233:4348"] {
+    position: static;
+    width: 100%;
+  }
+
+  .image-preview {
+    padding: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case-study,
+  .case-study :is(a, button, [role="button"]) {
+    scroll-behavior: auto;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
